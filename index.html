@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreya Gunda</title>
+    <!-- Favicon -->
+    <link href="img/IMG_4208.jpeg" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #ffe5b4;
+      --peach-dark: #ffcc99;
+      --accent: #ff9900;
+      --accent-dark: #e88000;
+      --text: #2d2d2d;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--peach);
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--peach-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .get-in-touch {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-in-touch:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: 1rem;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--peach-dark);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="brand">Shreya</div>
+  <div class="nav-right">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Power section.html">1:1 Section</a>
+      <a href="Services.html">Services</a>
+      <a href="BookaTalk.html">Book a Talk</a>
+      <a href="Author.html">The Author</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+<style>
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      background-color: var(--peach-dark);
+      padding: 1rem;
+      border-left: 5px solid var(--accent);
+      font-weight: 600;
+      margin-top: 1.5rem;
+      animation: popIn 1.3s ease-out;
+    }
+
+    .hero-image {
+      max-width: 960px;
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+.img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 80%;
+    max-width: 320px;
+    margin-top: 1.5rem;
+  }
+}
+
+    .img-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-image {
+        width: 80%;
+      }
+    }
+
+    .image-frame {
+  position: relative;
+  padding: 20px;
+  background: radial-gradient(circle at center, #fff8ee, #ffe5b4);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: floatFrame 5s ease-in-out infinite;
+}
+
+.hero-image {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+.image-stat-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+.center-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+/* Outer Animated Stat Rings */
+.stat-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  animation: rotate 12s linear infinite;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.stat1 {
+  top: -20px;
+  left: -20px;
+  width: 360px;
+  height: 360px;
+  border-top-color: #ff9900;
+  animation-delay: 0s;
+}
+
+.stat2 {
+  top: -35px;
+  left: -35px;
+  width: 390px;
+  height: 390px;
+  border-right-color: #ffcc70;
+  animation-delay: 2s;
+}
+
+.stat3 {
+  top: -50px;
+  left: -50px;
+  width: 420px;
+  height: 420px;
+  border-bottom-color: #e75480;
+  animation-delay: 4s;
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-stat-wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Style */
+.center-image {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+/* Glowing Border */
+.image-border-glow {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border-radius: 24px;
+  background: conic-gradient(
+    from 0deg,
+    #ff9900 0deg 90deg,
+    #ffcc70 90deg 180deg,
+    #e75480 180deg 270deg,
+    #ff9900 270deg 360deg
+  );
+  animation: rotateBorder 8s linear infinite;
+  z-index: 1;
+  filter: blur(8px);
+  opacity: 0.35;
+}
+
+@keyframes rotateBorder {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Stat Bars */
+.stat-bar {
+  position: absolute;
+  left: 105%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  animation: fadeIn 1s ease forwards;
+}
+
+.bar1 { top: 20%; animation-delay: 0.3s; }
+.bar2 { top: 45%; animation-delay: 0.5s; }
+.bar3 { top: 70%; animation-delay: 0.7s; }
+
+.fill {
+  width: 100px;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fill::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: var(--percent);
+  background-color: var(--color);
+  border-radius: 10px;
+  animation: growBar 2s ease-out forwards;
+}
+
+@keyframes growBar {
+  from { width: 0%; }
+  to   { width: var(--percent); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .image-stat-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .stat-bar {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .fill {
+    width: 120px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+
+<section class="hero">
+    <div class="hero-content">
+      <h1>Strategy, storytelling, and smart content that grows your brand — online and beyond.</h1>
+      <p>There’s no rule that says you need a giant team, fancy funnels, or ad spend to build demand.</p>
+      <p>So how do smart brands and solo founders actually pull it off?<br>
+      They show up where their people are, and say the right things.</p>
+      <p>That’s where content comes in.<br>
+      Not just any content — but the kind that makes people stop, think, and want to know more.</p>
+      <p>That’s where most people fumble.<br>
+      That’s where I come in.</p>
+      <p>I build strategies that connect.<br>
+      Write content that sounds like you.<br>
+      And position your work so it gets picked — not pitched.</p>
+      <div class="highlight">
+        No gimmicks. Just honest strategy, bold content, and real results.
+      </div>
+    </div>
+<div class="image-wrapper" style="text-align: center; padding: 2rem 0;">
+  <img src="img/Untitled (700 x 710 px) (28).png" alt="Hero Image" style="width: 770px; max-width: 100%; height: auto;" />
+</div>
+
+
+
+
+  </section>
+
+
+
+<section class="who-section">
+  <h2 class="section-title fancy-heading">
+  <span>Your Path to Becoming an Industry Leader</span>
+</h2>
+
+
+  <div class="cards-grid">
+    <div class="feature-card">
+      <span class="icon">🎯</span>
+      <h3>Coaches & Consultants</h3>
+      <p>Attract high-ticket clients and elevate your expertise with confidence.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">🏛️</span>
+      <h3>CEOs & Founders</h3>
+      <p>Position yourself as an industry leader and build a lasting legacy.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">💼</span>
+      <h3>Freelancers</h3>
+      <p>Land premium contracts — no more cold outreach or begging for gigs.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">🎤</span>
+      <h3>Authors & Speakers</h3>
+      <p>Stand out and secure more podcast & stage appearances.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">🏢</span>
+      <h3>Corporate Executives</h3>
+      <p>Boost your influence and unlock new leadership opportunities.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">💰</span>
+      <h3>Financial Advisors</h3>
+      <p>Build trust with HNW clients and lead confidently in a competitive space.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">💡</span>
+      <h3>Tech Entrepreneurs</h3>
+      <p>Establish your niche authority and become the go-to in your market.</p>
+    </div>
+
+    <div class="feature-card">
+      <span class="icon">🎓</span>
+      <h3>Students</h3>
+      <p>Start now. Build your brand early and unlock future opportunities.</p>
+    </div>
+
+    
+  </div>
+</section>
+
+<style>.who-section {
+  background: radial-gradient(circle at center, #fff8ee, #ffe5b4);
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1.5px solid rgba(255, 153, 0, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 1s ease forwards;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+
+.feature-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--accent);
+  display: inline-block;
+  animation: pulseIcon 2s infinite ease-in-out;
+}
+
+.highlight-card {
+  background: linear-gradient(145deg, #ffd8a4, #ffe5b4);
+  border: 3px solid #ff9900;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+
+</style>
+<section class="whyme-section">
+  <div class="whyme-content">
+    <div class="text-col">
+      <h2 class="whyme-title"><span>Why Me</span></h2>
+      <ul class="key-points">
+        <li><strong>15+</strong> founders positioned with distinct personal brands.</li>
+        <li><strong>60+</strong> brands scaled with content rooted in clarity and conversion.</li>
+        <li>
+          Architected marketing ecosystems across verticals:
+          <br />
+          <em>Real Estate, Fashion, Technology, IT & SaaS, Fitness & Wellness, Pharmaceuticals, Lifestyle, Product-led & Service-led Businesses, Entertainment, Education, and Publishing.</em>
+        </li>
+      </ul>
+      <p class="ecosystem-note">→ Not just niches — ecosystems I’ve built in.</p>
+      <p class="highlight-whyme">
+        With a blend of insight-driven positioning, conversion-led messaging, and executional precision —
+        <strong>I build visibility frameworks that move people and metrics.</strong>
+      </p>
+    </div>
+
+    <div class="image-col">
+      <div class="image-wrapper">
+        <img src="img/IMG_5811.jpeg" alt="Why Me Visual" class="whyme-image" />
+        <div class="floating-shape one"></div>
+        <div class="floating-shape two"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .whyme-section {
+  padding: 5rem 2rem;
+  background-color: #fffaf2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.whyme-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.text-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-col {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.whyme-title span {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff9900, #b743cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.whyme-title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #b743cb, #ff9900);
+  animation: underlineGrow 2s infinite ease-in-out;
+  border-radius: 2px;
+}
+
+@keyframes underlineGrow {
+  0%, 100% {
+    transform: scaleX(0.3);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
+.key-points {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 0;
+}
+
+.key-points li {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.key-points li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.ecosystem-note {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.highlight-whyme {
+  background-color: #ffe5b4;
+  padding: 1.2rem;
+  border-left: 5px solid #ff9900;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyme-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating decorative shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-shape.one {
+  width: 100px;
+  height: 100px;
+  background: #ff9900;
+  top: -30px;
+  left: -30px;
+  animation-delay: 0s;
+}
+
+.floating-shape.two {
+  width: 60px;
+  height: 60px;
+  background: #b743cb;
+  bottom: -20px;
+  right: -20px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whyme-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whyme-title span::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .whyme-image {
+    max-width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+</style>
+
+
+<section class="global-slider-section">
+<h2 class="gradient-heading">Trusted by Top Brands</h2>
+
+
+
+
+  <div class="slider" style="--width: 120px; --height: 120px; --gap: 30px;">
+    <div class="list">
+      <div class="item"><img src="img/1.png" alt=""></div>
+      <div class="item"><img src="img/2.png" alt=""></div>
+      <div class="item"><img src="img/3.png" alt=""></div>
+     <div class="item"><img src="img/4.png" alt=""></div>
+      <div class="item"><img src="img/5.png" alt=""></div>
+      <div class="item"><img src="img/6.png" alt=""></div>
+      <div class="item"><img src="img/7.png" alt=""></div>
+      <div class="item"><img src="img/8.png" alt=""></div>
+      <div class="item"><img src="img/9.png" alt=""></div>
+      <div class="item"><img src="img/10.png" alt=""></div>
+      <div class="item"><img src="img/11.png" alt=""></div>
+      <div class="item"><img src="img/12.png" alt=""></div>
+      <div class="item"><img src="img/13.png" alt=""></div>
+      
+
+      <!-- repeat for seamless loop -->
+      <div class="item"><img src="img/1.png" alt=""></div>
+      <div class="item"><img src="img/2.png" alt=""></div>
+      <div class="item"><img src="img/3.png" alt=""></div>
+     <div class="item"><img src="img/4.png" alt=""></div>
+      <div class="item"><img src="img/5.png" alt=""></div>
+      <div class="item"><img src="img/6.png" alt=""></div>
+      <div class="item"><img src="img/7.png" alt=""></div>
+      <div class="item"><img src="img/8.png" alt=""></div>
+      <div class="item"><img src="img/9.png" alt=""></div>
+      <div class="item"><img src="img/10.png" alt=""></div>
+      <div class="item"><img src="img/11.png" alt=""></div>
+      <div class="item"><img src="img/12.png" alt=""></div>
+      <div class="item"><img src="img/13.png" alt=""></div>
+    </div>
+  </div>
+
+  <style>
+  
+
+.gradient-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ec008c, #fc6767);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2rem 0;
+}
+
+
+    .global-slider-section {
+      background: #ffffff;
+      padding: 50px 20px;
+    }
+
+    .global-slider-heading {
+      text-align: center;
+      color: #dc1c7c;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .slider {
+      width: 100%;
+      height: var(--height);
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    }
+
+    .slider .list {
+      display: flex;
+      gap: var(--gap);
+      width: max-content;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .slider .item {
+      width: var(--width);
+      height: var(--height);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slider:hover .list {
+      animation-play-state: paused;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .slider {
+        --width: 80px;
+        --height: 80px;
+        --gap: 20px;
+      }
+
+      .global-slider-heading {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</section>
+
+
+
+<!-- Include this in <head> if not already -->
+
+<section class="video-hero-section">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="img/With a blend of insight-driven positioning, conversion-led messaging, and executional precision I build visibility frameworks that move people and metrics..mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay-text">
+    <p>
+      With a blend of <strong>insight-driven positioning</strong>, <strong>conversion-led messaging</strong>,<br>
+      and <strong>executional precision</strong>
+    </p>
+    <p>
+      I build <strong>visibility frameworks</strong> that move <strong>people</strong> and <strong>metrics</strong>.
+    </p>
+  </div>
+</section>
+
+
+<style>.video-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay text aligned to top-left */
+.video-overlay-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 2;
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.video-overlay-text p {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.video-overlay-text strong {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-overlay-text {
+    top: 15%;
+    left: 4%;
+    max-width: 90%;
+  }
+
+  .video-overlay-text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-overlay-text p {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
+
+
+<section class="ticker-section">
+  <h1></h1>
+  <div class="stock-ticker">
+    <ul>
+      <li>EMAIL CAMPAIGNS</li>
+      <li>SALES PAGES</li>
+      <li>WEBSITE COPY</li>
+      <li>CAMPAIGN ARCHITECTURE</li>
+      <li>LAUNCH SEQUENCES</li>
+      <li>BRAND POSITIONING</li>
+      <li>PRODUCT DESCRIPTIONS</li>
+      <li>SEO COPY</li>
+      <li>MARKETING STRATEGY</li>
+      <li>EVERGREEN FUNNELS</li>
+      <li>EMAIL CAMPAIGNS</li>
+      <li>SALES PAGES</li>
+      <li>WEBSITE COPY</li>
+      <li>CAMPAIGN ARCHITECTURE</li>
+      <li>LAUNCH SEQUENCES</li>
+      <li>BRAND POSITIONING</li>
+      <li>PRODUCT DESCRIPTIONS</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>EMAIL CAMPAIGNS</li>
+      <li>SALES PAGES</li>
+      <li>WEBSITE COPY</li>
+      <li>CAMPAIGN ARCHITECTURE</li>
+      <li>LAUNCH SEQUENCES</li>
+      <li>BRAND POSITIONING</li>
+      <li>PRODUCT DESCRIPTIONS</li>
+      <li>SEO COPY</li>
+      <li>MARKETING STRATEGY</li>
+      <li>EVERGREEN FUNNELS</li>
+      <li>EMAIL CAMPAIGNS</li>
+      <li>SALES PAGES</li>
+      <li>WEBSITE COPY</li>
+      <li>CAMPAIGN ARCHITECTURE</li>
+      <li>LAUNCH SEQUENCES</li>
+      <li>BRAND POSITIONING</li>
+      <li>PRODUCT DESCRIPTIONS</li>
+    </ul>
+  </div>
+</section>
+
+<style>* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.ticker-section h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  color: #131722;
+}
+
+.stock-ticker {
+  font-size: 1rem;
+  padding-block: 12px;
+  border-block: 1px solid #ccc;
+  overflow: hidden;
+  user-select: none;
+  --gap: 40px;
+  display: flex;
+  gap: var(--gap);
+  background: #fff;
+  white-space: nowrap;
+}
+
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 25s linear infinite;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+.stock-ticker li {
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@media (max-width: 768px) {
+  .ticker-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .stock-ticker {
+    font-size: 0.9rem;
+    --gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-ticker {
+    font-size: 0.8rem;
+    --gap: 20px;
+  }
+}
+
+
+</style>
+
+
+
+
+  
+<section class="table-section">
+  <div class="table-wrapper">
+    <div class="table-image-col">
+      <div class="sticky-img-wrapper">
+        <div class="decorative-frame">
+          <img src="img/IMG_5708.jpeg" alt="What I Bring" class="strategy-img" />
+          <!-- Decorative SVGs here -->
+           <!-- Decorative SVGs -->
+          <img src="data:image/svg+xml;base64,...your svg..." class="accent accent-1 glow" alt="" />
+          <img src="data:image/svg+xml;base64,...your svg..." class="accent accent-2 glow-pulse" alt="" />
+          <img src="data:image/svg+xml;base64,...your svg..." class="accent accent-3 glow-scale" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-column">
+       <div class="scroll-freeze-wrapper" id="freezeZone">
+       <div class="scroll-inner" id="scrollInner">
+  <div class="scroll-cards">
+            <h1>What I Bring to the Table</h1>
+
+           
+          <article class="scroll-cards__item">
+            <h2>🧠 Clarity + Consistency</h2>
+            <p>Magnetic Positioning<br>You become the go-to, not just another name.</p>
+          </article>
+
+          <article class="scroll-cards__item">
+            <h2>📢 Content + Context</h2>
+            <p>Visibility That Scales<br>Seen in the right places, by the right people, for the right reasons.</p>
+          </article>
+
+          <article class="scroll-cards__item">
+            <h2>🛠️ Messaging + Mechanics</h2>
+            <p>Strategy That Sells<br>Aligned words + repeatable systems = compounding traction.</p>
+          </article>
+
+          <article class="scroll-cards__item">
+            <h2>🎤 Voice + Value</h2>
+            <p>Brand That Converts<br>People don’t just hear you — they remember you.</p>
+          </article>
+
+          <article class="scroll-cards__item">
+            <h2>📈 Systems + Story</h2>
+            <p>Growth Without Guesswork<br>Clear workflows and strong narratives that deliver.</p>
+          </article>
+
+          <article class="scroll-cards__item scroll-cards__item--last">
+            <h2>💡 Thought Leadership + Demand Design</h2>
+            <p>Authority That Attracts<br>You don’t chase leads — they chase you.</p>
+    
+          </article>
+         <div class="final-cta">
+    <button class="cta-btn">Let’s Build Together</button>
+  </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+     
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+  /* Sticky Heading */
+.scroll-heading {
+  position: sticky;
+  top: 0;
+  background: #fff8ee;
+  padding: 1rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  z-index: 10;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f09, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin: 0 0 2rem 0;
+}
+
+
+
+
+
+  *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.scroll-cards {
+  counter-reset: card;
+  position: relative;
+  display: block;
+  padding-bottom: 120vh;
+}
+
+.scroll-cards > .scroll-cards__item + .scroll-cards__item {
+  margin-top: 40vh;
+}
+
+.scroll-cards h1 {
+  position: sticky;
+  top: 2rem;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 1em;
+  background: linear-gradient(90deg, #f09, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll-cards__item {
+  --offset: 0.5em;
+  position: sticky;
+  top: max(16vh, 10em);
+  padding: 2em 2em;
+  min-height: 19em;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-left: 8px solid #f09;
+  border-radius: 12px;
+  width: calc(100% - 5 * var(--offset));
+  transition: transform 0.3s ease;
+}
+
+.scroll-cards__item h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.scroll-cards__item p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.scroll-cards__item:nth-of-type(1) {
+  transform: translate(0, 0);
+}
+.scroll-cards__item:nth-of-type(2) {
+  transform: translate(0.5em, 0.5em);
+}
+.scroll-cards__item:nth-of-type(3) {
+  transform: translate(1em, 1em);
+}
+.scroll-cards__item:nth-of-type(4) {
+  transform: translate(1.5em, 1.5em);
+}
+.scroll-cards__item:nth-of-type(5) {
+  transform: translate(2em, 2em);
+}
+.scroll-cards__item:nth-of-type(6) {
+  transform: translate(2.5em, 2.5em);
+}
+
+@media screen and (min-width: 48em) {
+  .scroll-cards__item {
+    --offset: 1em;
+    padding-left: 3em;
+  }
+}
+
+  /* 💫 Glow-enhanced Indian Accents */
+.accent {
+  position: absolute;
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+.accent-1 {
+  top: -70px;
+  left: -70px;
+  width: 120px;
+  height: 120px;
+  animation: rotateGlow 18s linear infinite;
+}
+
+.accent-2 {
+  bottom: -50px;
+  right: -60px;
+  width: 110px;
+  height: 110px;
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+.accent-3 {
+  top: 40%;
+  left: -80px;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%);
+  animation: scaleGlow 7s ease-in-out infinite;
+}
+
+/* 🌟 Glow Effects */
+.glow {
+  filter: drop-shadow(0 0 10px rgba(255, 128, 0, 0.3));
+}
+
+.glow-pulse {
+  filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.2));
+}
+
+.glow-scale {
+  filter: drop-shadow(0 0 10px rgba(255, 153, 51, 0.4));
+}
+
+/* 🔄 Animations */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); opacity: 0.15; }
+  100% { transform: rotate(360deg); opacity: 0.15; }
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(-10px); opacity: 0.3; }
+}
+
+@keyframes scaleGlow {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.2); opacity: 0.3; }
+}
+
+  .accent {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.accent-1 {
+  top: -60px;
+  left: -60px;
+  animation: spin 20s linear infinite;
+}
+
+.accent-2 {
+  bottom: -50px;
+  right: -50px;
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.accent-3 {
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  animation: sway 8s ease-in-out infinite;
+}
+
+  /* Decorative frame wrapper */
+.decorative-frame {
+  position: relative;
+  display: inline-block;
+  animation: floatPulse 5s ease-in-out infinite;
+}
+
+/* Image styling */
+.strategy-img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+}
+
+/* Accent decorations */
+.accent {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Individual accents */
+.accent-1 {
+  top: -60px;
+  left: -60px;
+  animation: spin 20s linear infinite;
+}
+
+.accent-2 {
+  bottom: -50px;
+  right: -50px;
+  animation: pulse 6s ease-in-out infinite;
+  width: 120px;
+  height: 120px;
+}
+
+.accent-3 {
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  animation: sway 8s ease-in-out infinite;
+  width: 80px;
+  height: 80px;
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.2); opacity: 0.25; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(10px); }
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+  /* 🎨 Indian Artistic Accents */
+.indian-accent {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.mandala-circle {
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Mandala.svg');
+  animation: rotateArt 20s linear infinite;
+}
+
+.lotus-top {
+  top: -40px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f1/Lotus_flower_icon.svg');
+  animation: floatPulse 6s ease-in-out infinite;
+}
+
+.rangoli-right {
+  bottom: -50px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ee/Mandala_flower.svg');
+  animation: scaleGlow 8s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes rotateArt {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0); opacity: 0.1; }
+  50% { transform: translateY(-10px); opacity: 0.2; }
+}
+
+@keyframes scaleGlow {
+  0%, 100% { transform: scale(1); opacity: 0.12; }
+  50% { transform: scale(1.15); opacity: 0.25; }
+}
+
+  .table-section {
+  background-color: #fff8ee;
+  padding: 5rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.table-wrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.table-image-col {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.decorative-frame {
+  position: relative;
+  display: inline-block;
+  animation: floatPulse 4s ease-in-out infinite;
+}
+
+.strategy-img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+}
+
+/* Mandala-style animated shapes */
+.mandala {
+  position: absolute;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Mandala.svg'); /* You can change this to your own SVG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  animation: rotateMandala 12s linear infinite;
+}
+
+.top-left {
+  top: -30px;
+  left: -30px;
+}
+
+.bottom-right {
+  bottom: -30px;
+  right: -30px;
+}
+
+@keyframes rotateMandala {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.table-content-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.table-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border-left: 4px solid #ff9900;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.table-row.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.emoji {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-wrapper {
+    flex-direction: column;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .strategy-img {
+    max-width: 90%;
+  }
+
+  .mandala {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+ /* 📌 Sticky image on desktop */
+.table-image-col .sticky-img-wrapper {
+  position: sticky;
+  top: 8rem;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .table-image-col .sticky-img-wrapper {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* 🎯 Improved card look */
+.scroll-cards__item {
+  --offset: 0.7em;
+  position: sticky;
+  top: max(16vh, 10em);
+  padding: 2rem;
+  background: linear-gradient(to right, #fff, #fdf6f0);
+  border-left: 6px solid #ff9800;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-cards__item:hover {
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.12);
+  transform: scale(1.015);
+}
+
+/* 🧷 Lock last card at top */
+.scroll-cards__item.last {
+  position: sticky;
+  top: 6rem;
+  z-index: 10;
+}
+/* ✅ Sticky right-side image only on PC */
+@media (min-width: 992px) {
+  .sticky-img-wrapper {
+    position: sticky;
+    top: 8rem;
+    height: calc(100vh - 8rem);
+  }
+}
+
+/* Make image sticky on PC */
+@media (min-width: 992px) {
+  .table-image-col {
+    position: sticky;
+    top: 5rem;
+    align-self: flex-start;
+    height: fit-content;
+  }
+}
+
+/* Scroll card enhancements */
+.scroll-cards__item {
+  --offset: 1em;
+  position: sticky;
+  top: max(16vh, 10em);
+  padding: 2rem 2rem;
+  background: linear-gradient(135deg, #fff, #fff8ee);
+  border-left: 6px solid #f09;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08), 0 2px 12px rgba(255, 153, 0, 0.15);
+  margin-bottom: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.scroll-cards__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15), 0 2px 16px rgba(255, 153, 0, 0.2);
+}
+
+/* Emoji heading */
+.scroll-cards__item h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Last card should freeze at end */
+.scroll-cards__item--last {
+  position: sticky;
+  bottom: 3rem;
+}
+
+.scroll-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden; /* 👈 prevent internal scrolling */
+  transition: all 0.5s ease;
+  z-index: 10;
+  background: #fff8ee;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.scroll-cards {
+  transition: top 0.3s ease;
+  background-color: #fff8ee; /* Optional: helps avoid transparency */
+}
+
+
+/* Hide scrollbar for scroll-inner */
+.scroll-inner::-webkit-scrollbar {
+  display: none;
+}
+.scroll-inner {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Freeze behavior */
+.scroll-freeze-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff8ee;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-inner {
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.scroll-inner.freeze {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Freeze the card container */
+.scroll-inner.freeze .scroll-cards {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Fade in CTA */
+.final-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  text-align: center;
+  margin-top: 2rem;
+  z-index: 3;
+  position: relative;
+}
+
+.scroll-inner.freeze + .final-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+</style>
+
+<script>
+  const scrollWrapper = document.getElementById('scrollInner'); // inner scroll div
+  const lastCard = document.querySelector('.scroll-cards__item--last');
+  const finalCTA = document.getElementById('finalCTA');
+
+  let scrollLocked = false;
+
+  scrollWrapper.addEventListener('scroll', () => {
+    if (scrollLocked) return;
+
+    const lastCardRect = lastCard.getBoundingClientRect();
+    const wrapperRect = scrollWrapper.getBoundingClientRect();
+
+    // When last card touches the top of scroll wrapper
+    if (lastCardRect.top <= wrapperRect.top + 10) {
+      scrollWrapper.style.overflow = 'hidden'; // lock scroll
+      scrollWrapper.scrollTop = scrollWrapper.scrollTop; // fix position
+      scrollLocked = true;
+
+      // Show button
+      finalCTA.classList.add('show');
+    }
+  });
+</script>
+
+
+<!-- 🌟 Auto-Sliding Testimonial Section Start -->
+<section class="testimonial-section">
+  <div class="testimonial-header">
+    <h2 class="testimonial-title">Proven Results!</h2>
+    <p class="testimonial-subtitle">70+ brands vouch for what I do.</p>
+  </div>
+
+  <div class="testimonial-slider-wrapper">
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>“Truly excellent at what she does. From branding to celeb copy, everything hit the mark. Messaging was so clear, we had people reach out just from our ads. Couldn’t be happier with the results!”</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+            <img src="img/WhatsApp Image 2025-07-16 at 7.37.00 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Santhosh Kumar</h2>
+            <p class="designation">CEO: Dr. WellnessOn</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>“Truly impressed. The content nailed industry standards—smart, precise, and packed with insight. Complex real estate topics felt clear and credible. Perfect blend of expertise and accessibility!”</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+            <img src="img/WhatsApp Image 2025-07-16 at 7.21.49 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Varya Vardhan</h2>
+            <p class="designation">ValetEZ & ChargeEZ: BDM
+Country’s Youngest SCR Contractor
+</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>“Shreya were fantastic to work with. Their SEO work boosted our site and streamlined our workflow. Clear, timely, and super professional—highly recommend for anyone serious about results.”</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+            <img src="img/WhatsApp Image 2025-07-16 at 6.46.45 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Antra Sharma</h2>
+            <p class="designation">Founder-Dhyana Kriya,Doctor</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Great working with Shreya! Sharp content, smart strategy, and strong creative skills.</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 6.53.22 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Abhishek Pinninti </h2>
+            <p class="designation">Founder: Wittelsbach.ai, Cakes & Co and Abna Group</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya really knows her stuff—blogs, brand copy, technical docs, you name it. Makes complex ideas clear and engaging. Super easy to work with. Highly recommend!</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+            <img src="img/WhatsApp Image 2025-07-16 at 7.07.45 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Rohit Musthyala</h2>
+            <p class="designation">Founder at Nucifera solutions (Louisville, Colorado, United States)</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya has a magic touch with poetry. Her edits brought my words to life—clearer, stronger, more impactful. Supportive, insightful, and a joy to work with. Can’t wait to collaborate again!</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 6.50.33 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Ms. Vibha Hasija</h2>
+            <p class="designation">Founder & Partner: Nutrition with Vibha
+MSc (Foods, Nutrition and Dietetics)</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Her strategy covered it all—voice, tone, relevance, and reach. Everything looked great and made sense. Felt like she was building the brand like it was her own. One of our smartest calls.</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 7.14.47 PM (1).jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Shiva Kumar</h2>
+            <p class="designation">AmpleLogic: Marketing Head</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya delivered standout work and made collaboration a breeze. She even took time to guide our interns—breaking down content strategy like a pro. Smart, supportive, and a total team player. 10/10!</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 7.17.26 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Nithin Sai</h2>
+            <p class="designation">We Promote U
+Digital Marketing Manager</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya’s a great listener—easy to talk to, quick to adapt, and always ready to learn. Focused, open to feedback, and genuinely passionate about content. A total asset to any team</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 7.11.20 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Sonali Sahu</h2>
+            <p class="designation">Eleve Media : Marketing Manager
+Growth Marketer
+
+</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya just gets it—brand voice, clarity, and content that clicks. Always delivers work that resonates. A go-to if you want to level up your content game!</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 6.39.01 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Vaishali Srivastava </h2>
+            <p class="designation">Fashion, Beauty & Lifestyle Influencer
+Social Media Strategist</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+         <div class="mycard text-center">
+        <div class="content">
+          <div class="text">
+            <p>Shreya nailed managing my client’s social media—engaging Reels, strong posts, and sharp LinkedIn articles. Creative, professional, and always on time. Highly recommend for content and social media!</p>
+          </div>
+        </div>
+        <div class="author">
+          <div class="image">
+           <img src="img/WhatsApp Image 2025-07-16 at 6.44.20 PM.jpeg" class="img-fluid">
+          </div>
+          <div class="details">
+            <h2>Krishna Nishant Anantatmula</h2>
+            <p class="designation">Sales & Marketing - AP.TS. Red FM Telugu</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- CTA Button -->
+  <div class="testimonial-cta text-center mt-4">
+    
+  </div>
+</section>
+
+<!-- 🌟 Styles -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.testimonial-section {
+  padding: 4rem 1rem;
+ background: radial-gradient(circle at center, #fff8ee, #ffe5b4);
+}
+
+.testimonial-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dc1c7c;
+  text-align: center;
+}
+
+.testimonial-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.testimonial-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 30px;
+  animation: scrollCards 30s linear infinite;
+  width: max-content;
+  padding: 1rem 0;
+}
+
+@keyframes scrollCards {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-slider-wrapper:hover .testimonial-slider {
+  animation-play-state: paused;
+}
+
+.mycard {
+  flex: 0 0 30%;
+  min-width: 280px;
+  max-width: 350px;
+  position: relative;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 4px solid #dc1c7c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.mycard:hover {
+  transform: scale(1.02);
+}
+
+.mycard .image {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #dc1c7c;
+}
+
+.mycard .image img {
+  width: 100%;
+  height: auto;
+}
+
+.mycard .text {
+  color: #333;
+  font-size: 16px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.mycard .text::before {
+  content: "\f10d";
+  font-family: FontAwesome;
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mycard .details {
+  text-align: center;
+  color: #dc1c7c;
+}
+
+.mycard .details h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.mycard .stars {
+  font-size: 20px;
+  color: gold;
+  margin-top: 5px;
+}
+
+.testimonial-cta {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #dc1c7c;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #dc1c7c !important;
+  transform: none !important;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .testimonial-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-subtitle {
+    font-size: 1rem;
+  }
+
+  .testimonial-slider {
+    animation-duration: 60s;
+  }
+
+  .cta-button {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+}
+</style>
+
+
+
+
+
+<!-- Connect Section -->
+<section class="connection-section" id="contact">
+  <div class="connect-container">
+    <h2 class="connect-title"><span>Trusted</span> by Thousands</h2>
+
+    <div class="stats">
+      <div class="stat" data-target="5000">
+        <i class="fab fa-instagram icon"></i>
+        <div class="stat-number">0</div>
+        <div class="stat-label">Instagram Followers</div>
+      </div>
+      <div class="stat" data-target="12000">
+        <i class="fab fa-linkedin-in icon"></i>
+        <div class="stat-number">0</div>
+        <div class="stat-label">LinkedIn Followers</div>
+      </div>
+      <div class="stat" data-target="11000000">
+  <i class="fas fa-eye icon"></i>
+  <div class="stat-number">0</div>
+  <div class="stat-label">Impressions</div>
+</div>
+
+      <div class="stat" data-target="60">
+        <i class="fas fa-users icon"></i>
+        <div class="stat-number">0</div>
+        <div class="stat-label">worked with 60+ Brands</div>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- Font and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .connection-section {
+   background: #f9a007;
+;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-title {
+    font-size: 2.8em;
+    color: #f0f2f4;
+    margin-bottom: 40px;
+  }
+
+  .connect-title span {
+    color: #f4efef;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    background: #fff;
+    padding: 30px 25px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat .icon {
+    font-size: 2.5em;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+
+  .stat-label {
+    font-size: 1em;
+    color: #444;
+    margin-top: 5px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons li a {
+    font-size: 1.8em;
+    color: #007BFF;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons .tooltip {
+    visibility: hidden;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .social-icons li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .connect-title {
+      font-size: 2em;
+    }
+
+    .stat {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+</style>
+
+<!-- Scroll-Triggered Count Animation Script -->
+<script>
+  const statElements = document.querySelectorAll('.stat');
+
+  const animateCounters = (entry) => {
+    const statNumber = entry.querySelector('.stat-number');
+    const target = +entry.getAttribute('data-target');
+    let count = 0;
+    const duration = 2000;
+    const stepTime = Math.max(10, duration / target);
+
+    const formatNumber = (num) => {
+      if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K+';
+      return num;
+    };
+
+    const update = () => {
+      count += Math.ceil(target / (duration / stepTime));
+      if (count >= target) {
+        statNumber.innerText = formatNumber(target);
+      } else {
+        statNumber.innerText = formatNumber(count);
+        setTimeout(update, stepTime);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters(entry.target);
+        obs.unobserve(entry.target); // only run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statElements.forEach(stat => observer.observe(stat));
+</script>
+
+<section class="main">
+  <!-- First Row -->
+  <div class="row">
+    <div class="card card-left">
+      <img src="img/51.png" alt="Card 1" />
+    </div>
+    <div class="card card-right">
+      <img src="img/52.png" alt="Card 2" />
+    </div>
+  </div>
+
+  <!-- Vision Text Block -->
+  <div class="vision-text" id="visionText">
+    <h2>Your vision — our creation</h2>
+    <p>
+      Strategy, storytelling, and smart content that grows your brand — online and beyond.
+    </p>
+  </div>
+
+  <!-- Second Row -->
+  <div class="row">
+    <div class="card card-left">
+      <img src="img/53.png" alt="Card 3" />
+    </div>
+    <div class="card card-right">
+      <img src="img/54.png" alt="Card 4" />
+    </div>
+  </div>
+
+  <!-- Third Row -->
+  <div class="row">
+    <div class="card card-left">
+      <img src="img/55.png" alt="Card 5" />
+    </div>
+    <div class="card card-right">
+      <img src="img/56.png" alt="Card 6" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .main {
+    padding: 80px 5%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    perspective: 1200px;
+  }
+
+  .card {
+    width: 48%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    background-color: #f5f5f5;
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .vision-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 120px auto;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.5s ease;
+    padding: 0 20px;
+  }
+
+  .vision-text h2 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #2c1e5e;
+    margin-bottom: 20px;
+  }
+
+  .vision-text p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #444;
+    line-height: 1.6;
+  }
+
+  /* Tablet */
+  @media (max-width: 992px) {
+    .card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .vision-text {
+      margin: 100px auto;
+    }
+  }
+
+  /* Small Mobile */
+  @media (max-width: 576px) {
+    .main {
+      padding: 60px 3%;
+    }
+
+    .vision-text {
+      margin: 80px auto;
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const isMobile = window.innerWidth <= 768;
+
+    const leftX = isMobile ? [-400, -300, -200] : [-1000, -800, -600];
+    const rightX = isMobile ? [400, 300, 200] : [1000, 800, 600];
+    const yVals = isMobile ? [60, -60, -120] : [100, -150, -250];
+    const leftRot = isMobile ? [-15, -10, -5] : [-30, -20, -15];
+    const rightRot = isMobile ? [15, 10, 5] : [30, 20, 15];
+
+    gsap.utils.toArray(".row").forEach((row, index) => {
+      const cardLeft = row.querySelector(".card-left");
+      const cardRight = row.querySelector(".card-right");
+
+      if (!cardLeft || !cardRight) return;
+
+      ScrollTrigger.create({
+        trigger: row,
+        start: "top 80%",
+        end: "bottom top",
+        scrub: true,
+        onUpdate: self => {
+          const p = self.progress;
+
+          gsap.set(cardLeft, {
+            x: p * leftX[index],
+            y: p * yVals[index],
+            rotation: p * leftRot[index]
+          });
+
+          gsap.set(cardRight, {
+            x: p * rightX[index],
+            y: p * yVals[index],
+            rotation: p * rightRot[index]
+          });
+        }
+      });
+    });
+
+    // Animate the vision text
+    gsap.to("#visionText", {
+      scrollTrigger: {
+        trigger: "#visionText",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: true,
+      },
+      opacity: 1,
+      y: 0,
+      ease: "power2.out"
+    });
+  } else {
+    console.warn("GSAP or ScrollTrigger not available.");
+  }
+});
+</script>
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <span>© <strong>Shreya</strong> — All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <a href="https://www.instagram.com/authoreyaa/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shreyagunda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:shreyagunda76@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-right">
+<span>
+  Designed with ❤️ by 
+  <strong>
+    <a href="https://www.linkedin.com/in/nitish-kumar-516aba28b/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+      Nitish Kumar
+    </a>
+  </strong>
+</span>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+  .site-footer {
+    background: linear-gradient(135deg, #ffe5b4, #ffcc99);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-left strong,
+  .footer-right strong {
+    color: #ff9900;
+  }
+
+  .footer-left:hover,
+  .footer-right:hover {
+    transform: translateY(-2px);
+    color: #111;
+  }
+
+  .footer-center a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-center a:hover {
+    color: #ff9900;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-center {
+      order: 1;
+    }
+    .footer-left,
+    .footer-right {
+      order: 2;
+    }
+  }
+</style>
+
+<!-- Page Transition: Vertical Sliding Tiles -->
+<div class="loader loader--active" id="page-transition">
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0s 2.5s ease;
+    background: transparent;
+  }
+
+  .loader__tile {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 20%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: height 2.2s ease;
+  }
+
+  .loader__tile:nth-child(1) { left: 0%; transition-delay: 0s; }
+  .loader__tile:nth-child(2) { left: 20%; transition-delay: 0.4s; }
+  .loader__tile:nth-child(3) { left: 40%; transition-delay: 0.8s; }
+  .loader__tile:nth-child(4) { left: 60%; transition-delay: 1.2s; }
+  .loader__tile:nth-child(5) { left: 80%; transition-delay: 1.6s; }
+
+  .loader--active {
+    height: 100vh;
+    transition-delay: 0s;
+  }
+
+  .loader--active .loader__tile {
+    height: 100vh;
+  }
+</style>
+
+<script>
+  const loader = document.getElementById('page-transition');
+
+  // On page load
+  window.addEventListener('load', () => {
+    loader.classList.remove('loader--active');
+  });
+
+  // On link click
+  document.querySelectorAll("a[href]").forEach(link => {
+    const isInternal = link.hostname === window.location.hostname;
+
+    link.addEventListener("click", e => {
+      if (!isInternal || link.target === "_blank" || link.href.includes("#") || link.hasAttribute("data-no-transition")) return;
+      e.preventDefault();
+
+      loader.classList.add("loader--active");
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 3000); // Wait for animation to complete
+    });
+  });
+</script>
+
+</body>
+</html>

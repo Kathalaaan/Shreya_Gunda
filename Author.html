@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shreya Gunda</title>
+    <!-- Favicon -->
+    <link href="img/IMG_4208.jpeg" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #ffe5b4;
+      --peach-dark: #ffcc99;
+      --accent: #ff9900;
+      --accent-dark: #e88000;
+      --text: #2d2d2d;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--peach);
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--peach-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .get-in-touch {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-in-touch:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: 1rem;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--peach-dark);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="brand">Shreya</div>
+  <div class="nav-right">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Power section.html">1:1 Section</a>
+      <a href="Services.html">Services</a>
+      <a href="BookaTalk.html">Book a Talk</a>
+      <a href="Author.html">The Author</a>
+        <a href="Gallery.html">Gallery</a>
+      <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+
+
+
+
+  <section class="story-section">
+  <div class="story-container">
+    <div class="story-image-wrapper">
+      <div class="image-frame">
+        <img src="img/IMG_5513.jpeg" alt="Story Image" class="story-image" />
+      </div>
+    </div>
+    <div class="story-content">
+      <h2 class="story-heading">
+        Where does a story go when it’s <span>rooted in truth</span>,
+        spoken with clarity,<br> and shared without fear?
+      </h2>
+      <p class="story-highlight">It becomes more than a narrative. It becomes a movement.</p>
+      <p>My body of work exists to spark that movement.</p>
+      <p>Each piece I write is born from lived intensity — from moments of radical clarity, silent awakenings, and the daily discipline of choosing presence.</p>
+      <p>The words carry echoes of self-inquiry, feminine strength, moral grit, purpose, and the rarest form of love: the kind that’s imagined, pure, untamed, and futuristic.</p>
+      <p>My stories speak to those building their own becoming. To those who live wide awake... seeking growth, depth, and direction. Who stand tall in their identity, walk through life with soldier-like grace, and honour every version of themselves — even the broken ones.</p>
+      <p>My narratives are born from personal excavation and universal resonance, delving into themes of self-realisation, spiritual discipline, mental sovereignty, emotional resilience, womanhood, and identity.</p>
+      <p>I write from a place of inner stillness and warrior spirit. A place where poetry meets psychology.</p>
+      <p><strong>Above all, I stand fiercely and intentionally for the voices of women.</strong><br>To anchor women’s voices in global spaces — bold, undeniable, and here to stay.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.story-section {
+  background: linear-gradient(to bottom right, #fffaf4, #ffe5d0);
+  padding: 6rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.story-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.story-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frame {
+  position: relative;
+  padding: 20px;
+  background: radial-gradient(circle at center, #fff8ee, #ffe5b4);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: floatFrame 5s ease-in-out infinite;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.story-content {
+  flex: 1.5;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.story-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.story-heading span {
+  background: linear-gradient(120deg, #ff9900, #e75480);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.story-highlight {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #ffe4c2;
+  padding: 1rem;
+  border-left: 6px solid #ff9900;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  color: #1a1a1a;
+}
+
+@keyframes floatFrame {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .story-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .story-heading {
+    font-size: 1.7rem;
+  }
+
+  .story-content {
+    padding-top: 2rem;
+  }
+
+  .story-highlight {
+    text-align: left;
+  }
+}
+</style>
+
+<!-- Include this in <head> if not already -->
+
+<section class="video-hero-section">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="img/9683618-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay-text">
+    <p>
+     I write for <strong>those who feel deeply </strong><br>
+      and <strong>live consciously.</strong>
+    </p>
+   
+  </div>
+</section>
+
+
+<style>.video-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay text aligned to top-left */
+.video-overlay-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 2;
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.video-overlay-text p {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.video-overlay-text strong {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-overlay-text {
+    top: 15%;
+    left: 4%;
+    max-width: 90%;
+  }
+
+  .video-overlay-text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-overlay-text p {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
+<section class="she-project-section">
+  <div class="she-container">
+    <div class="she-content">
+      <h2 class="she-heading">
+        What is Project <span>‘She.’</span>?
+        <br><span class="subheading">A movement inked in truth.</span>
+      </h2>
+      <p class="she-highlight">She. is a literary uprising — <strong>unfiltered, unapologetic, and undeniable.</strong></p>
+      <p>Featuring <strong>60+ fierce women</strong> from across the UK 🇬🇧, United States 🇺🇸, Turkey 🇹🇷, Oman 🇴🇲, Europe 🇪🇺, Canada 🇨🇦, Jamaica 🇯🇲, Palestine 🇵🇸, Pakistan 🇵🇰, Australia 🇦🇺, Saudi Arabia 🇸🇦, and rooted across India — Orissa, Aligarh, Bangalore, Karnataka, Kolkata, Mumbai, Lucknow, Bihar, Punjab, Kerala, and Nepal 🇳🇵.</p>
+      <p>Every page speaks of <em>womanhood, identity, inner warfare, healing, power, philosophy,</em> and <strong>personal revolution</strong>.</p>
+      <p>This project exists to <strong>disrupt silence</strong> — to offer a literary space where women write as they are, from where they’ve been, and for where the world must go.</p>
+    </div>
+
+    <div class="she-image-wrapper">
+      <div class="she-image-frame">
+        <img src="img/IMG_3218.PNG" alt="Project She Image" class="she-image" />
+        <div class="she-badge">She.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.she-project-section {
+  background-color: #ffe4c2;
+  padding: 6rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.she-container {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.she-content {
+  flex: 1.5;
+  font-size: 1.07rem;
+  color: #2b2b2b;
+  line-height: 1.9;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+.she-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.she-heading span {
+  background: linear-gradient(120deg, #ff6f00, #d14b7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.she-highlight {
+  background-color: #fff2df;
+  padding: 1.2rem;
+  border-left: 6px solid #ff6f00;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.she-highlight::before {
+
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.she-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.she-image-frame {
+  position: relative;
+  padding: 24px;
+  background: radial-gradient(circle at center, #fff8ee, #ffd8a0);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+  animation: float 5s ease-in-out infinite;
+}
+
+.she-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 14px;
+  z-index: 2;
+  position: relative;
+}
+
+.she-badge {
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
+  background: #ff9900;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(255, 153, 0, 0.25);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .she-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .she-heading {
+    font-size: 1.8rem;
+  }
+
+  .she-content {
+    padding-top: 2.5rem;
+  }
+
+  .she-highlight {
+    text-align: left;
+  }
+
+  .she-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.she-image-frame {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: rotate(-1.5deg);
+  transition: transform 0.4s ease;
+}
+
+.she-image-frame::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 100%;
+  height: 100%;
+  background: #ff9900;
+  border-radius: 12px;
+  z-index: -1;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 25px rgba(255, 153, 0, 0.3);
+}
+
+.she-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.she-image-frame:hover {
+  transform: rotate(0deg) scale(1.015);
+}
+
+.she-image-frame:hover .she-image {
+  transform: scale(1.03);
+}
+
+.she-badge {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: linear-gradient(45deg, #ff6f00, #e75480);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 1.0rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 1.2s ease forwards;
+}
+
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+</style>
+    <section>
+        <div class="container">
+            <div class="left-side">
+                <img src="./img/star.png" class="star-s4 star" alt="">
+                <div class="title">
+                   <h1>Published Works</h1>
+<h2>Books That Tell My Story</h2>
+
+                </div>
+            </div>
+           
+        </div>
+        <div class="card-container">
+            <div class="card card-1">
+                <div class="rotation">
+                    <img src="img/41klbToSdiL._SY445_SX342_.jpg " alt="" class="img-card image">
+                </div>
+                <div class="color">She. Vol 2</div>
+                <span>Shreya Gunda</span>
+            </div>
+            
+            <div class="card card-2">
+                <div class="rotation">
+                    <img src="img/41VeLUNI5DS._SY445_SX342_.jpg" alt="" class="img-card image">
+                </div>
+                <div class="color">Salt air on my waves</div>
+                <span>Shreya Gunda</span>
+            </div>
+            <div class="card card-3">
+                <div class="rotation">
+                    <img src="img/51Y+6MZJJTL._SY466_.jpg" alt="" class="img-card image">
+                </div>
+                <div class="color">Blooming Self</div>
+                <span>Shreya Gunda</span>
+            </div>
+        </div>
+    </section>
+<style>
+/* ========== MY ACHIEVEMENTS SECTION ========== */
+
+section {
+  padding: 3rem;
+   background: linear-gradient(to bottom, #fff2e5, #fde4cf); /* Soft continuation */
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  align-items: center;
+  max-width: 1300px;
+  gap: 2rem;
+}
+
+.left-side {
+  justify-self: flex-start;
+}
+
+.title {
+  line-height: 1.2;
+}
+
+.title h1 {
+  font-size: 57px;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  color: #111010;
+  font-family: 'bm'; /* BlackMango font */
+}
+
+.title h2 {
+  font-size: 24px;
+  opacity: .5;
+  color: rgb(77, 76, 76);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========== CARD STYLES ========== */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-card {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ensures full image is visible */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-1 {
+  background: linear-gradient(to right, #545d60, #283048);
+}
+.card-2 {
+  background: linear-gradient(to right, #4b485a, #1f1c2c);
+}
+.card-3 {
+  background: linear-gradient(to right, #3f4c6b, #535e79);
+}
+
+.card:hover {
+  background: linear-gradient(to left, #3a7bd5, #00d2ff);
+  transform: scale(1.03);
+}
+
+.card:hover .color {
+  color: #fff;
+}
+
+.color {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.card span {
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Floating Animation */
+.image {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .title h1 {
+    font-size: 42px;
+  }
+
+  .title h2 {
+    font-size: 20px;
+  }
+
+  .card-container {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .title h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .title h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .img-card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+<!--  First marquee -->
+<div class="marquee">
+  <div class="marquee__group">
+    <span>Salt air on my waves ➺</span>
+    <span>She. Vol 2 ➺</span>
+    <span>Blooming Self ➺</span>
+  </div>
+  <div class="marquee__group" aria-hidden="true">
+    <span>Salt air on my waves ➺</span>
+    <span>She. Vol 2 ➺</span>
+    <span>Blooming Self ➺</span>
+  </div>
+</div>
+
+<style>
+.marquee {
+  display: flex;
+  overflow: hidden;
+  height: 12vh; /* Increased height */
+  user-select: none;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center; /* Vertically center content */
+}
+
+.marquee:hover {
+  -webkit-text-stroke: 1.5px #fff;
+  text-stroke: 1.5px #fff;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: all 0.5s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll 15s linear infinite reverse;
+}
+
+.marquee__group span {
+  color: rgb(235, 155, 59);
+  font-size: 5vw;
+  font-weight: 800;
+  white-space: nowrap;
+  font-family: 'Syne', sans-serif !important;
+  line-height: 1.1; /* Helps avoid clipping */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .marquee__group span {
+    font-size: 6vw; /* Slightly smaller for mobile */
+  }
+}
+</style>
+
+
+    <!-- Your full-page banner/slider -->
+     <section class="reader-gallery-section">
+  <div class="reader-title">
+    <h2>Readers Around the World 🌍</h2>
+    <p>A glimpse into the beautiful faces who’ve embraced <em>
+Blooming Self</em>.</p>
+  </div>
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <div class="item1" style="--position: 1"><img src="img/WhatsApp Image 2025-07-15 at 3.14.36 PM.jpeg" alt=""></div>
+            <div class="item1" style="--position: 2"><img src="img/WhatsApp Image 2025-07-15 at 3.14.35 PM.jpeg" alt=""></div>
+            <div class="item1" style="--position: 3"><img src="img/WhatsApp Image 2025-07-15 at 3.14.32 PM (1).jpeg" alt=""></div>
+            <div class="item1" style="--position: 4"><img src="img/WhatsApp Image 2025-07-15 at 3.14.33 PM (2).jpeg" alt=""></div>
+            <div class="item1" style="--position: 5"><img src="img/WhatsApp Image 2025-07-15 at 3.14.35 PM (1).jpeg" alt=""></div>
+            <div class="item1" style="--position: 6"><img src="img/WhatsApp Image 2025-07-15 at 3.14.34 PM.jpeg" alt=""></div>
+            <div class="item1" style="--position: 7"><img src="img/WhatsApp Image 2025-07-15 at 3.14.34 PM (2).jpeg" alt=""></div>
+            <div class="item1" style="--position: 8"><img src="img/WhatsApp Image 2025-07-15 at 3.14.34 PM (1).jpeg" alt=""></div>
+            <div class="item1" style="--position: 9"><img src="img/WhatsApp Image 2025-07-15 at 3.14.33 PM.jpeg" alt=""></div>
+            <div class="item1" style="--position: 10"><img src="img/WhatsApp Image 2025-07-15 at 3.14.35 PM (2).jpeg" alt=""></div>
+             
+        </div>
+        <div class="content">
+            <div class="author"></div>
+            <div class="model"></div>
+        </div>
+    </div>
+    </section>
+
+
+    <style> @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item1{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(images/model.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item1{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item1{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.list {
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  position: relative;
+  padding: 0.2rem;
+}
+.item {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+  box-shadow: rgb(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+
+
+
+.item_content {
+  background-color: #0b0909;
+  color: #ede0e0;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  display: flex;
+  position: relative;
+  width: 50%;
+}
+
+.item_media {
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+}
+
+.padding-global {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.padding-vertical {
+  padding: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item_content,
+  .item_media {
+    height: 50vh;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .item_number {
+    font-size: .5rem;
+    top: 1.5rem;
+  }
+}
+
+
+
+
+
+@keyframes pulse-underline {
+  0%, 100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1.3);
+  }
+}
+
+
+.reader-gallery-section {
+  background: linear-gradient(to bottom, #fffaf6, #fdf3ee);
+  padding: 5rem 2rem 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reader-title h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #3e3029;
+  margin-bottom: 0.5rem;
+}
+
+.reader-title p {
+  font-size: 1.2rem;
+  color: #6b4e3d;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+</style>
+<section id="books-scroll-section">
+  <div class="books-wrapper">
+
+    <!-- Book 1: Salt Air On My Waves -->
+    <div class="book-card" style="--bg:#ffe4c2">
+      <div class="left-side">
+        <h1>Salt Air on My Waves</h1>
+        <h2>by Shreya Gunda</h2>
+        <p class="book-description">
+          This book is a journey through love, healing, dreams and rediscovery. With poems that comfort, uplift and awaken, it's a poetic ocean where darkness meets moonlight, stars, and hope. Notes to self inspire readers to live deeply, feel fully, and bloom anew.
+        </p>
+        <div class="type">
+          <p>Amazon</p>
+          <a href="https://www.amazon.in/salt-air-waves-Shreya-Gunda/dp/935472034X" target="_blank">
+            <button class="elegant-button">Buy on Amazon</button>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <img src="img/41VeLUNI5DS._SY445_SX342_.jpg" alt="Salt Air on My Waves Book" />
+      </div>
+    </div>
+
+    <!-- Book 2: She. Volume 2 -->
+    <div class="book-card" style="--bg:#fde7dc">
+      <div class="left-side">
+        <h1>She. Volume 2</h1>
+        <h2>A Global Garden of Stories</h2>
+        <p class="book-description">
+          A powerful collection of narratives from women around the world. Every page affirms your presence and power, echoing: "You are seen, heard, and never alone." Bold, raw, and unifying—this book is a celebration of womanhood in all its strength and diversity.
+        </p>
+        <div class="type">
+          <p>Amazon</p>
+          <a href="https://www.amazon.in/dp/9360493325" target="_blank">
+            <button class="elegant-button">Buy on Amazon</button>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <img src="img/41klbToSdiL._SY445_SX342_.jpg" alt="She Volume 2 Book" />
+      </div>
+    </div>
+
+    <!-- Book 3: Blooming Self -->
+    <div class="book-card" style="--bg:#fbe2ce">
+      <div class="left-side">
+        <h1>Blooming Self</h1>
+        <h2>Poems for the Soul's Journey</h2>
+        <p class="book-description">
+          A heartfelt invitation to bloom unapologetically. From struggles to stardust, this book is a soulful mirror reflecting the real, raw beauty within. Each poem is a light toward self-discovery, authenticity, and eternal presence beyond the page.
+        </p>
+        <div class="type">
+          <p>Amazon</p>
+          <a href="https://www.amazon.in/dp/9355972938" target="_blank">
+            <button class="elegant-button">Buy on Amazon</button>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <img src="img/51Y+6MZJJTL._SY466_.jpg" alt="Blooming Self Book" />
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-buffer"></div>
+</section>
+
+<!-- GSAP ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cards = document.querySelectorAll(".book-card");
+
+  cards.forEach((card, index) => {
+    ScrollTrigger.create({
+      trigger: card,
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+      scrub: true
+    });
+  });
+</script>
+
+<style>
+  .scroll-buffer {
+  height: 100vh; /* Adjust based on your footer height */
+  background: var(--bg); /* Optional: match last card's background */
+}
+
+  #books-scroll-section {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .books-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .book-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: var(--bg);
+    min-height: 100vh;
+  }
+
+  .book-card .left-side {
+    padding: 1rem 2rem;
+  }
+
+  .book-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+    color: #3e2e2a;
+  }
+
+  .book-card h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #5e4c45;
+  }
+
+  .book-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4d3a36;
+    margin-bottom: 2rem;
+  }
+
+  .book-card .type p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: #815f4b;
+  }
+
+  .book-card .elegant-button {
+    background: linear-gradient(135deg, #c78b65, #9e5f3f);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(158, 95, 63, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .book-card .elegant-button:hover {
+    background: linear-gradient(135deg, #9e5f3f, #c78b65);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(158, 95, 63, 0.5);
+  }
+
+  .book-card .right-side {
+    text-align: center;
+  }
+
+  .book-card img {
+    width: 80%;
+    max-width: 320px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+  }
+
+  .book-card img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .book-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .book-card .right-side {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+<!-- My Designs Section -->
+<section class="designs-section" id="my-designs">
+  <div class="designs-container">
+    <h2 class="services-title"><span>Media 
+</span>Features</h2>
+    
+    <div class="scroll-wrapper">
+      <div class="designs-grid">
+        <!-- Original Set -->
+        <div class="design-card"><img src="img/11.jpeg" alt="Design 1" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/12.jpeg" alt="Design 2" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/13.jpeg" alt="Design 3" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/14.jpeg" alt="Design 4" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/15.jpeg" alt="Design 5" onclick="openModal(this.src)" /></div>
+        
+        <!-- Duplicate Set for seamless loop -->
+        <div class="design-card"><img src="img/16.jpeg" alt="Design 1" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/17.jpeg" alt="Design 2" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/18.jpeg" alt="Design 3" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/19.jpeg" alt="Design 4" onclick="openModal(this.src)" /></div>
+        <div class="design-card"><img src="img/11.jpeg" alt="Design 5" onclick="openModal(this.src)" /></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  .designs-section {
+    padding: 5rem 2rem;
+    background-color: #fff8f2;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .services-title span {
+    color: #ff774e;
+    font-weight: 700;
+  }
+
+  .scroll-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .designs-grid {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scrollLoop 40s linear infinite;
+  }
+
+  .design-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .design-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .design-card:hover {
+    transform: scale(1.06);
+  }
+
+  @keyframes scrollLoop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+  }
+
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    color: #f1f1f1;
+  }
+
+  @media (max-width: 600px) {
+    .design-card {
+      width: 140px;
+      height: 140px;
+    }
+    .services-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<!-- Modal Script -->
+<script>
+  function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
+
+
+
+<section id="book-scroll-section" style="height: 8000px; position: relative;">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Iowan+Old+Style&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #book-scroll-section {
+      background-color: #151d0a;
+    }
+
+    .book-container {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      perspective: 1500px;
+      overflow: visible;
+      z-index: 5;
+    }
+
+    .book-wrapper {
+      width: 300px;
+      height: 420px;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .book {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .book-cover,
+    .book-side,
+    .book-page {
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+
+    .book-cover-front,
+    .book-cover-back,
+    .book-cover-middle {
+      width: 100%;
+      height: 100%;
+      background-color: #8B4513;
+    }
+
+    .book-cover-front img,
+    .book-cover-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .book-cover-front {
+      transform: translateZ(30px);
+      z-index: 200;
+      transform-origin: left center;
+    }
+
+    .book-cover-back {
+      transform: translateZ(-30px);
+      z-index: 1;
+      transform-origin: right center;
+    }
+
+    .book-cover-middle {
+      width: 60px;
+      height: 100%;
+      left: calc(50% - 30px);
+      transform: rotateY(90deg);
+      background-color: #704214;
+    }
+
+    .book-side {
+      background-color: #d6bb87;
+    }
+
+    .book-side-right {
+      width: 60px;
+      height: 100%;
+      right: 0;
+      transform: rotateY(90deg) translateX(50%);
+    }
+
+    .book-side-top,
+    .book-side-bottom {
+      width: 100%;
+      height: 60px;
+      left: 0;
+    }
+
+    .book-side-top {
+      top: 0;
+      transform: rotateX(90deg) translateY(-50%);
+    }
+
+    .book-side-bottom {
+      bottom: 0;
+      transform: rotateX(90deg) translateY(50%);
+    }
+
+    .book-page-stacked {
+      top: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      transform-style: preserve-3d;
+      z-index: 50;
+    }
+
+    .segment {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+    }
+
+    .segment .segment-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .segment-side-front img,
+    .segment-side-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .segment-side-back {
+      transform: rotateY(180deg);
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffc132;
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: sans-serif;
+      animation: bounce 2s infinite;
+      z-index: 10;
+    }
+
+    .scroll-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+    }
+  </style>
+
+
+
+<section id="book-scroll-section" style="height: 8000px; position: relative;">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Iowan+Old+Style&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #book-scroll-section {
+      background-color: #151d0a;
+    }
+
+    .book-container {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      perspective: 1500px;
+      overflow: visible;
+      z-index: 5;
+    }
+
+    .book-wrapper {
+      width: 300px;
+      height: 420px;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .book {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .book-cover,
+    .book-side,
+    .book-page {
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+
+    .book-cover-front,
+    .book-cover-back,
+    .book-cover-middle {
+      width: 100%;
+      height: 100%;
+      background-color: #8B4513;
+    }
+
+    .book-cover-front img,
+    .book-cover-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .book-cover-front {
+      transform: translateZ(30px);
+      z-index: 200;
+      transform-origin: left center;
+    }
+
+    .book-cover-back {
+      transform: translateZ(-30px);
+      z-index: 1;
+      transform-origin: right center;
+    }
+
+    .book-cover-middle {
+      width: 60px;
+      height: 100%;
+      left: calc(50% - 30px);
+      transform: rotateY(90deg);
+      background-color: #704214;
+    }
+
+    .book-side {
+      background-color: #d6bb87;
+    }
+
+    .book-side-right {
+      width: 60px;
+      height: 100%;
+      right: 0;
+      transform: rotateY(90deg) translateX(50%);
+    }
+
+    .book-side-top,
+    .book-side-bottom {
+      width: 100%;
+      height: 60px;
+      left: 0;
+    }
+
+    .book-side-top {
+      top: 0;
+      transform: rotateX(90deg) translateY(-50%);
+    }
+
+    .book-side-bottom {
+      bottom: 0;
+      transform: rotateX(90deg) translateY(50%);
+    }
+
+    .book-page-stacked {
+      top: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      transform-style: preserve-3d;
+      z-index: 50;
+    }
+
+    .segment {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+    }
+
+    .segment .segment-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .segment-side-front img,
+    .segment-side-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .segment-side-back {
+      transform: rotateY(180deg);
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffc132;
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: sans-serif;
+      animation: bounce 2s infinite;
+      z-index: 10;
+    }
+
+    .scroll-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+    }
+  </style>
+
+  <div class="book-container">
+    <div class="book-wrapper" id="bookWrapper">
+      <div class="book">
+        <div class="book-cover book-cover-front" id="coverFront">
+          <img src="img/51Y+6MZJJTL._SY466_.jpg" alt="Front Cover" />
+        </div>
+         <div class="book-cover book-cover-back" id="coverBack">
+          <img src="img/41klbToSdiL._SY445_SX342_.jpg" alt="Back Cover" />
+        </div>
+        <div class="book-cover book-cover-middle"></div>
+        <div class="book-side book-side-right"></div>
+        <div class="book-side book-side-top"></div>
+        <div class="book-side book-side-bottom"></div>
+
+        <div class="book-page book-page-stacked" id="pages">
+          <!-- Each segment with decreasing z-index and increasing z-depth -->
+         <div class="segment" style="z-index: 9; transform: translateZ(0px);" data-index="0">
+            <div class="segment-side segment-side-front"><img src="img/IMG_5696.jpeg" alt=""></div>
+            <div class="segment-side segment-side-back"><img src="img/IMG_3560.jpeg" alt=""></div>
+          </div>
+          <div class="segment" style="z-index: 8; transform: translateZ(-2px);" data-index="1">
+            <div class="segment-side segment-side-front"><img src="img/IMG_3560.jpeg" alt=""></div>
+            <div class="segment-side segment-side-back"><img src="img/14.jpeg" alt=""></div>
+          </div>
+          <div class="segment" style="z-index: 7; transform: translateZ(-4px);" data-index="2">
+            <div class="segment-side segment-side-front"><img src="img/15.jpeg" alt=""></div>
+            <div class="segment-side segment-side-back"><img src="img/16.jpeg" alt=""></div>
+          </div>
+          <div class="segment" style="z-index: 6; transform: translateZ(-6px);" data-index="3">
+            <div class="segment-side segment-side-front"><img src="img/17.jpeg" alt=""></div>
+            <div class="segment-side segment-side-back"><img src="img/18.jpeg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const segments = document.querySelectorAll('.segment');
+    const coverFront = document.getElementById('coverFront');
+    const coverBack = document.getElementById('coverBack');
+    const section = document.getElementById('book-scroll-section');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const relativeScroll = scrollY - sectionTop;
+
+      if (scrollY < sectionTop || scrollY > sectionTop + sectionHeight) return;
+
+      // Open Front Cover
+      if (relativeScroll < 1000) {
+        const openRatio = relativeScroll / 1000;
+        coverFront.style.transform = `translateZ(30px) rotateY(${-openRatio * 180}deg)`;
+      }
+
+      // Flip Pages
+      segments.forEach((segment, index) => {
+        const pageStart = 1000 + index * 1000;
+        const pageEnd = pageStart + 1000;
+        const progress = (relativeScroll - pageStart) / 1000;
+        if (relativeScroll >= pageStart && relativeScroll <= pageEnd) {
+          segment.style.transform = `translateZ(${-(index * 2)}px) rotateY(${progress * 180}deg)`;
+        } else if (relativeScroll > pageEnd) {
+          segment.style.transform = `translateZ(${-(index * 2)}px) rotateY(180deg)`;
+        } else {
+          segment.style.transform = `translateZ(${-(index * 2)}px) rotateY(0deg)`;
+        }
+      });
+
+     // Close Back Cover
+      const lastPageEnd = 1000 + segments.length * 1000;
+      if (relativeScroll > lastPageEnd && relativeScroll <= lastPageEnd + 1000) {
+        const closeRatio = (relativeScroll - lastPageEnd) / 1000;
+        coverBack.style.transform = `translateZ(-30px) rotateY(${180 - closeRatio * 180}deg)`;
+      } else if (relativeScroll > lastPageEnd + 1000) {
+        coverBack.style.transform = `translateZ(-30px) rotateY(0deg)`;
+      }
+    });
+  </script>
+</section>
+
+
+
+
+<!-- Font and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .connection-section {
+   background: #f9a007;
+;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-title {
+    font-size: 2.8em;
+    color: #f0f2f4;
+    margin-bottom: 40px;
+  }
+
+  .connect-title span {
+    color: #f4efef;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    background: #fff;
+    padding: 30px 25px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat .icon {
+    font-size: 2.5em;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+
+  .stat-label {
+    font-size: 1em;
+    color: #444;
+    margin-top: 5px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons li a {
+    font-size: 1.8em;
+    color: #007BFF;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons .tooltip {
+    visibility: hidden;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .social-icons li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .connect-title {
+      font-size: 2em;
+    }
+
+    .stat {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+</style>
+
+<!-- Scroll-Triggered Count Animation Script -->
+<script>
+  const statElements = document.querySelectorAll('.stat');
+
+  const animateCounters = (entry) => {
+    const statNumber = entry.querySelector('.stat-number');
+    const target = +entry.getAttribute('data-target');
+    let count = 0;
+    const duration = 2000;
+    const stepTime = Math.max(10, duration / target);
+
+    const formatNumber = (num) => {
+      if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K+';
+      return num;
+    };
+
+    const update = () => {
+      count += Math.ceil(target / (duration / stepTime));
+      if (count >= target) {
+        statNumber.innerText = formatNumber(target);
+      } else {
+        statNumber.innerText = formatNumber(count);
+        setTimeout(update, stepTime);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters(entry.target);
+        obs.unobserve(entry.target); // only run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statElements.forEach(stat => observer.observe(stat));
+</script>
+
+
+
+<!-- ===== CONNECT SECTION (Full Width, Standalone) ===== -->
+<section class="connect-section" id="contact">
+  <div class="connect-container">
+   <h2 class="services-title" style="
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #fffef9;
+  text-align: center;
+  margin-bottom: 2rem;
+">
+  <span style="color: #161513;">Let's Connect</span> 
+</h2>
+
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.linkedin.com/in/shreyagunda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app 
+ " target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+          <span class="tooltip">LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/authoreyaa/" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span class="tooltip">Instagram</span>
+        </a>
+      </li>
+      
+ 
+      <li>
+        <a href="mailto:shreyagunda76@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i>
+          <span class="tooltip">Gmail</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<style>.connect-section {
+  width: 100%;
+  background: #ffe5b4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: "OpenSans-Regular", sans-serif;
+  z-index: 1;
+  position: relative;
+}
+
+.connect-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icons li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  height: 100px;
+  width: 100px;
+  background: #171515;
+  color: #666;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.social-icons li::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.social-icons li:nth-child(1)::before { background: #2867B2; }
+.social-icons li:nth-child(2)::before { background: #E1306C; }
+.social-icons li:nth-child(3)::before { background: #0088cc; }
+.social-icons li:nth-child(4)::before { background: #D44638; }
+
+.social-icons li:hover::before {
+  transform: scale(1.2);
+  filter: blur(3px);
+}
+
+.social-icons li:hover {
+  color: #fff;
+  text-shadow: 0 0 15px currentColor;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.social-icons li .tooltip {
+  position: absolute;
+  bottom: -30px;
+  font-size: 14px;
+  background: #fff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  color: #333;
+}
+
+.social-icons li:hover .tooltip {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.social-icons li a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.social-icons i {
+  font-size: 50px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons li:hover i {
+  transform: scale(1.2);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .social-icons li {
+    height: 80px;
+    width: 80px;
+  }
+  .social-icons i {
+    font-size: 40px;
+  }
+  .social-icons {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .social-icons li {
+    height: 60px;
+    width: 60px;
+  }
+  .social-icons i {
+    font-size: 30px;
+  }
+  .social-icons {
+    gap: 15px;
+  }
+  .social-icons li .tooltip {
+    font-size: 12px;
+    bottom: -25px;
+  }
+}
+
+</style>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <span>© <strong>Shreya</strong> — All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <a href="https://www.instagram.com/authoreyaa/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shreyagunda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:shreyagunda76@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-right">
+<span>
+  Designed with ❤️ by 
+  <strong>
+    <a href="https://www.linkedin.com/in/nitish-kumar-516aba28b/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+      Nitish Kumar
+    </a>
+  </strong>
+</span>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+  .site-footer {
+    background: linear-gradient(135deg, #ffe5b4, #ffcc99);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-left strong,
+  .footer-right strong {
+    color: #ff9900;
+  }
+
+  .footer-left:hover,
+  .footer-right:hover {
+    transform: translateY(-2px);
+    color: #111;
+  }
+
+  .footer-center a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-center a:hover {
+    color: #ff9900;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-center {
+      order: 1;
+    }
+    .footer-left,
+    .footer-right {
+      order: 2;
+    }
+  }
+</style>
+<!-- Page Transition: Vertical Sliding Tiles -->
+<div class="loader loader--active" id="page-transition">
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0s 2.5s ease;
+    background: transparent;
+  }
+
+  .loader__tile {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 20%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: height 2.2s ease;
+  }
+
+  .loader__tile:nth-child(1) { left: 0%; transition-delay: 0s; }
+  .loader__tile:nth-child(2) { left: 20%; transition-delay: 0.4s; }
+  .loader__tile:nth-child(3) { left: 40%; transition-delay: 0.8s; }
+  .loader__tile:nth-child(4) { left: 60%; transition-delay: 1.2s; }
+  .loader__tile:nth-child(5) { left: 80%; transition-delay: 1.6s; }
+
+  .loader--active {
+    height: 100vh;
+    transition-delay: 0s;
+  }
+
+  .loader--active .loader__tile {
+    height: 100vh;
+  }
+</style>
+
+<script>
+  const loader = document.getElementById('page-transition');
+
+  // On page load
+  window.addEventListener('load', () => {
+    loader.classList.remove('loader--active');
+  });
+
+  // On link click
+  document.querySelectorAll("a[href]").forEach(link => {
+    const isInternal = link.hostname === window.location.hostname;
+
+    link.addEventListener("click", e => {
+      if (!isInternal || link.target === "_blank" || link.href.includes("#") || link.hasAttribute("data-no-transition")) return;
+      e.preventDefault();
+
+      loader.classList.add("loader--active");
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 3000); // Wait for animation to complete
+    });
+  });
+</script>
+
+</body>
+</html>

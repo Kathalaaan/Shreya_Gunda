@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shreya Gunda</title>
+    <!-- Favicon -->
+    <link href="img/IMG_4208.jpeg" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #ffe5b4;
+      --peach-dark: #ffcc99;
+      --accent: #ff9900;
+      --accent-dark: #e88000;
+      --text: #2d2d2d;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--peach);
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--peach-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .get-in-touch {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-in-touch:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: 1rem;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--peach-dark);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="brand">Shreya</div>
+  <div class="nav-right">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+   <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Power section.html">1:1 Section</a>
+      <a href="Services.html">Services</a>
+      <a href="BookaTalk.html">Book a Talk</a>
+      <a href="Author.html">The Author</a>
+        <a href="Gallery.html">Gallery</a>
+      <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+
+
+
+
+
+<section class="strategic-support-section">
+  <div class="container">
+    <header class="header-animated">
+      <h1 class="headline" style="padding-bottom: 4rem;">Strategic support that moves the needle.</h1>
+
+
+      <!-- ✅ INSERTED VIDEO HERO SECTION HERE -->
+      <section class="video-hero-section">
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="img/7651528-uhd_3840_2160_30fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay-text">
+       
+         
+          <p>
+          </p> 
+
+          
+            <p>
+             Build a brand  <strong>that connects, converts, and compounds over time.</strong>
+          </p>
+        </div>
+      </section>
+      <!-- ✅ END VIDEO HERO SECTION -->
+
+      <p class="tagline"></p>
+    </header>
+
+    <!-- ... rest of your section remains unchanged ... -->
+<div class="services-grid">
+      <article class="service-card" tabindex="0">
+        <h3>Brand Consulting & Strategy</h3>
+        <p>Clarity is the first step to scale. I help founders, teams, and individuals uncover their unique value, shape their positioning, and develop messaging frameworks that stick — internally and in the market.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Ghostwriting & Thought Leadership</h3>
+        <p>You’ve got the ideas. I help you articulate them with power. Whether it’s LinkedIn, personal blogs, or long-form content — I write like you speak, but sharper, bolder, and more strategic.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Brand Marketing & Content Ecosystems</h3>
+        <p>From campaigns to content calendars, I craft full-funnel systems that grow your online presence, build brand trust & drive measurable traction.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>SEO & Content Architecture</h3>
+        <p>I blend creativity with technical precision, building scalable content systems based on search intent, keyword clarity, and topical authority. SEO that’s built for humans and algorithms.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Lead Generation (Organic-first)</h3>
+        <p>Growth without ad fatigue. I design content-led lead systems that attract high-intent audiences, build inbound demand, and convert curiosity into qualified calls — naturally.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>1:1 Coaching (for Founders, Freelancers & Creators)</h3>
+        <p>Your shortcut to clarity, momentum, and long-term brand leverage. I help you refine your positioning, unlock content angles, build visibility, and grow with strategy.</p>
+      </article>
+
+     
+    </div>
+<!-- ✅ INSERTED VIDEO HERO SECTION -->
+<section class="video-hero-section">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="img/6931246-uhd_2160_3840_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay-text">
+    <p>
+      This isn’t just about content.
+ <strong>It’s about engineered visibility, brand-first strategy</strong>, <strong>and repeatable systems that drive authority, trust 
+</strong>,<br>
+      and <strong>traction.</strong>
+    </p>
+  
+  </div>
+</section>
+<!-- ✅ END VIDEO HERO SECTION -->
+
+
+    <div class="cta-section">
+  <h2 class="neon-text">Let’s make your brand impossible to ignore.</h2>
+  <button class="btn-primary" onclick="window.location.href='getintouch.html'">Work With Me Now</button>
+</div>
+
+  </div>
+</section> 
+
+<style>
+  .services-grid {
+  padding-bottom: 4rem; /* or margin-bottom if you prefer */
+}
+
+.video-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay text aligned to top-left */
+.video-overlay-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 2;
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.video-overlay-text p {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.video-overlay-text strong {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-overlay-text {
+    top: 15%;
+    left: 4%;
+    max-width: 90%;
+  }
+
+  .video-overlay-text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-overlay-text p {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+ .neon-text {
+  color: #00eaff;
+  font-weight: 900;
+  font-size: 2.2rem;
+  text-align: center;
+  animation: flickerBlue 3s infinite;
+  text-shadow:
+    0 0 5px #00eaff,
+    0 0 10px #00eaff,
+    0 0 20px #00bfff,
+    0 0 40px #00bfff,
+    0 0 60px #00bfff;
+}
+
+@keyframes flickerBlue {
+  0%, 18%, 22%, 25%, 50%, 52%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #00eaff,
+      0 0 10px #00eaff,
+      0 0 20px #00bfff,
+      0 0 40px #00bfff;
+  }
+  19%, 24%, 51% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+}
+
+
+
+
+
+  /* Base container */
+  .strategic-support-section {
+    background: linear-gradient(135deg, #f5f0e6, #fff);
+    color: #222;
+    padding: 5rem 2rem 6rem;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header-animated {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 1.3s ease forwards;
+  }
+
+  .headline {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    background: linear-gradient(90deg, #ff6f61, #ff9900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #555;
+    margin-top: 0.7rem;
+    opacity: 0.85;
+  }
+
+  /* Services Grid - portrait cards, vertical stacking */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.6rem 2rem;
+    justify-items: center;
+    perspective: 1200px; /* for 3D tilt */
+  }
+
+  /* Service Card Styles */
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.2rem 2rem 3rem;
+    width: 280px;
+    height: 400px; /* portrait shape */
+    box-shadow:
+      0 8px 20px rgba(255, 111, 97, 0.25),
+      0 4px 12px rgba(255, 153, 0, 0.15);
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.45s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card:hover,
+  .service-card:focus {
+    box-shadow:
+      0 20px 40px rgba(255, 111, 97, 0.45),
+      0 10px 30px rgba(255, 153, 0, 0.35);
+    transform: translateY(-16px) rotateX(8deg) rotateY(6deg) scale(1.07);
+    outline: none;
+  }
+
+  .service-card h3 {
+    font-weight: 800;
+    color: #ff6f61;
+    font-size: 1.45rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+  }
+
+  .service-card:hover h3,
+  .service-card:focus h3 {
+    color: #ff9900;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    flex-grow: 1;
+    user-select: none;
+  }
+
+  /* Highlight text */
+  .highlight {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    color: #ff7b3b;
+    font-size: 1.2rem;
+    margin: 4rem auto 4rem;
+    max-width: 700px;
+    animation: fadeInUp 1.6s ease forwards;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .cta-section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #ff6f61;
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, #ff6f61, #ff9900);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    padding: 1rem 2.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255,111,97,0.5);
+    transition: all 0.35s ease;
+    will-change: transform;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    box-shadow: 0 16px 40px rgba(255,153,0,0.8);
+    transform: scale(1.12);
+    outline: none;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 10px #ff6f61,
+        0 0 20px #ff6f61,
+        0 0 30px #ff9900,
+        0 0 40px #ff9900;
+    }
+    50% {
+      text-shadow: none;
+    }
+  }
+
+  /* Accessibility: keyboard focus */
+  .service-card:focus-visible {
+    outline: 3px solid #ff9900;
+    outline-offset: 4px;
+  }
+
+  /* Responsive */
+  @media (max-width: 680px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      width: 260px;
+      height: 380px;
+      padding: 1.8rem 1.6rem 2.6rem;
+    }
+
+    .headline {
+      font-size: 2.4rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.8rem;
+    }
+
+    .btn-primary {
+      font-size: 1.1rem;
+      padding: 0.9rem 2rem;
+    }
+  }
+</style>
+
+
+<!-- Font and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .connection-section {
+   background: #f9a007;
+;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-title {
+    font-size: 2.8em;
+    color: #f0f2f4;
+    margin-bottom: 40px;
+  }
+
+  .connect-title span {
+    color: #f4efef;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    background: #fff;
+    padding: 30px 25px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat .icon {
+    font-size: 2.5em;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+
+  .stat-label {
+    font-size: 1em;
+    color: #444;
+    margin-top: 5px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons li a {
+    font-size: 1.8em;
+    color: #007BFF;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons .tooltip {
+    visibility: hidden;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .social-icons li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .connect-title {
+      font-size: 2em;
+    }
+
+    .stat {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+</style>
+
+<!-- Scroll-Triggered Count Animation Script -->
+<script>
+  const statElements = document.querySelectorAll('.stat');
+
+  const animateCounters = (entry) => {
+    const statNumber = entry.querySelector('.stat-number');
+    const target = +entry.getAttribute('data-target');
+    let count = 0;
+    const duration = 2000;
+    const stepTime = Math.max(10, duration / target);
+
+    const formatNumber = (num) => {
+      if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K+';
+      return num;
+    };
+
+    const update = () => {
+      count += Math.ceil(target / (duration / stepTime));
+      if (count >= target) {
+        statNumber.innerText = formatNumber(target);
+      } else {
+        statNumber.innerText = formatNumber(count);
+        setTimeout(update, stepTime);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters(entry.target);
+        obs.unobserve(entry.target); // only run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statElements.forEach(stat => observer.observe(stat));
+</script>
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <span>© <strong>Shreya</strong> — All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <a href="https://www.instagram.com/authoreyaa/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shreyagunda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:shreyagunda76@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-right">
+<span>
+  Designed with ❤️ by 
+  <strong>
+    <a href="https://www.linkedin.com/in/nitish-kumar-516aba28b/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+      Nitish Kumar
+    </a>
+  </strong>
+</span>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+  .site-footer {
+    background: linear-gradient(135deg, #ffe5b4, #ffcc99);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-left strong,
+  .footer-right strong {
+    color: #ff9900;
+  }
+
+  .footer-left:hover,
+  .footer-right:hover {
+    transform: translateY(-2px);
+    color: #111;
+  }
+
+  .footer-center a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-center a:hover {
+    color: #ff9900;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-center {
+      order: 1;
+    }
+    .footer-left,
+    .footer-right {
+      order: 2;
+    }
+  }
+</style>
+<!-- Page Transition: Vertical Sliding Tiles -->
+<div class="loader loader--active" id="page-transition">
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0s 2.5s ease;
+    background: transparent;
+  }
+
+  .loader__tile {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 20%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: height 2.2s ease;
+  }
+
+  .loader__tile:nth-child(1) { left: 0%; transition-delay: 0s; }
+  .loader__tile:nth-child(2) { left: 20%; transition-delay: 0.4s; }
+  .loader__tile:nth-child(3) { left: 40%; transition-delay: 0.8s; }
+  .loader__tile:nth-child(4) { left: 60%; transition-delay: 1.2s; }
+  .loader__tile:nth-child(5) { left: 80%; transition-delay: 1.6s; }
+
+  .loader--active {
+    height: 100vh;
+    transition-delay: 0s;
+  }
+
+  .loader--active .loader__tile {
+    height: 100vh;
+  }
+</style>
+
+<script>
+  const loader = document.getElementById('page-transition');
+
+  // On page load
+  window.addEventListener('load', () => {
+    loader.classList.remove('loader--active');
+  });
+
+  // On link click
+  document.querySelectorAll("a[href]").forEach(link => {
+    const isInternal = link.hostname === window.location.hostname;
+
+    link.addEventListener("click", e => {
+      if (!isInternal || link.target === "_blank" || link.href.includes("#") || link.hasAttribute("data-no-transition")) return;
+      e.preventDefault();
+
+      loader.classList.add("loader--active");
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 3000); // Wait for animation to complete
+    });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Shreya Gunda</title>
+    <!-- Favicon -->
+    <link href="img/IMG_4208.jpeg" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #ffe5b4;
+      --peach-dark: #ffcc99;
+      --accent: #ff9900;
+      --accent-dark: #e88000;
+      --text: #2d2d2d;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--peach);
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--peach-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .get-in-touch {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-in-touch:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: 1rem;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--peach-dark);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="brand">Shreya</div>
+  <div class="nav-right">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+   <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Power section.html">1:1 Section</a>
+      <a href="Services.html">Services</a>
+      <a href="BookaTalk.html">Book a Talk</a>
+      <a href="Author.html">The Author</a>
+        <a href="Gallery.html">Gallery</a>
+      <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+
+
+
+
+
+<section class="hero real-convo">
+<div class="framed-image enhanced-frame">
+  <img src="img/Untitled (700 x 710 px) (29).png" alt="Shreya Profile" class="center-image" />
+</div>
+
+
+
+  <div class="hero-content">
+    <h1><span class="underline-accent">Bring Real Conversations</span> to the Room</h1>
+    <p class="tagline">The kind that stay with people long after the event ends.</p>
+
+    <p>I’m <strong>Shreya</strong> — writer, creative strategist, and someone who’s built a career at the intersection of purpose and perspective.</p>
+    <p>Over the past <strong>5+ years</strong>, I’ve worked with founders, freelancers, students, and creatives — and seen what it really takes to build something meaningful.</p>
+    <p>I talk about that. Through <em>real stories</em>, honest emotions, and what they don’t teach in schools, offices, or courses.</p>
+
+    <ul class="accomplishments">
+      <li>📘 Published 3 books on mindset, growth & storytelling</li>
+      <li>🎤 Spoke across agencies, student networks & creator circles</li>
+      <li>🌱 Built a personal brand rooted in clarity & creativity</li>
+    </ul>
+
+    <div class="highlight">Stories that connect. Truths that stay. Impact that lingers.</div>
+  </div>
+</section>
+
+
+<style>
+
+
+
+ 
+
+
+  
+  
+  .real-convo {
+  background: linear-gradient(to bottom right, #fffaf4, #fff1e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem 2rem;
+  flex-wrap: wrap;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.real-convo .hero-content {
+  flex: 1 1 500px;
+  max-width: 600px;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.real-convo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.underline-accent {
+  display: inline-block;
+  background-image: linear-gradient(120deg, #ff9900 0%, #ffcc70 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 88%;
+  padding-bottom: 0.1em;
+}
+
+.real-convo .tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e75480;
+  margin-bottom: 1.8rem;
+  display: block;
+}
+
+.real-convo p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.real-convo .accomplishments {
+  margin: 1.5rem 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.real-convo .accomplishments li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.real-convo .highlight {
+  background-color: var(--peach-dark, #ffe1c4);
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--accent, #ff9900);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+  animation: popIn 1.3s ease-out;
+}
+
+.image-stat-wrapper {
+  flex: 1 1 400px;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep useful fade/slide for text only */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .real-convo {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .image-stat-wrapper {
+    width: 300px;
+  }
+
+  .real-convo h1 {
+    font-size: 2rem;
+  }
+
+  .real-convo .tagline {
+    font-size: 1rem;
+  }
+
+  .real-convo .highlight {
+    font-size: 0.95rem;
+  }
+}
+</style>
+
+
+<section id="services-scroll">
+  <!-- Intro Block -->
+  <div class="service-block gradient" id="intro-block">
+    <h2 class="intro-title">Most Requested Sessions</h2>
+    <p class="intro-desc highlight-text">
+      A curated list of my most requested sessions — made to meet your audience where they are.
+    </p>
+  </div>
+
+  <div class="service-block branding">
+    <h2>(01) Branding, Content & Marketing</h2>
+    <ul>
+      <li>Personal Branding that Builds Trust & Influence</li>
+      <li>Storytelling Systems for Startups & Solopreneurs</li>
+      <li>The Psychology of Branding: Trust, Perception & Recall</li>
+      <li>AI-Powered Storytelling: Humanizing Automation</li>
+      <li>Brand Visibility ≠ Virality: The Strategy Gap Most Creators Miss</li>
+      <li>Thought Leadership in Noisy Markets</li>
+    </ul>
+  </div>
+
+  <div class="service-block personal">
+    <h2>(02) Personal Growth, Mental Wellness & Creative Living</h2>
+    <ul>
+      <li>Mental Clarity in a Hyperconnected World</li>
+      <li>Burnout to Balance: The Real Inner Work</li>
+      <li>Work-Life Harmony for Creative Professionals</li>
+      <li>How to Stay Creatively Inspired Long-Term</li>
+      <li>High-Functioning Anxiety: What No One Talks About</li>
+      <li>Self-Work in the Creator Economy</li>
+    </ul>
+  </div>
+
+  <div class="service-block career">
+    <h2>(03) Career, Freelancing & Future of Work</h2>
+    <ul>
+      <li>Content Writing & Freelancing as a Career</li>
+      <li>Portfolio Careers: Owning Your Multi-Hyphenate Path</li>
+      <li>How to Figure Out What You’re Good At (Before the World Labels You)</li>
+      <li>From Comparison to Clarity: Reclaiming Creative Identity</li>
+      <li>Freelancing 2.0: Building a Sustainable Independent Career</li>
+      <li>Confidence, Clarity & Communication: A Career Trinity</li>
+    </ul>
+  </div>
+
+  <div class="service-block student">
+    <h2>(04) Student-First Conversations</h2>
+    <ul>
+      <li>Writing is the #1 Career Skill (No Matter What You Do)</li>
+      <li>LinkedIn 101 for Students: Build Authority While You Learn</li>
+      <li>Side Hustles That Teach More Than College Projects Ever Will</li>
+      <li>Academic Pressure, Rejection & Real Growth</li>
+      <li>Communicate So People Take You Seriously</li>
+      <li>Growth Mindset for Students & Self-Starters</li>
+    </ul>
+  </div>
+
+  <!-- Spacer to push next section into view -->
+  <div class="services-spacer"></div>
+</section>
+
+<!-- Next Section -->
+<section class="real-talks-section">
+  <div class="container">
+    <h2><span class="line-accent">Not just talks.</span></h2>
+    <p class="animated-highlight">
+      Tactical, <span class="glow">transformative conversations</span> that meet real needs across
+      <strong class="tagged">career</strong>, <strong class="tagged">content</strong>, and
+      <strong class="tagged">creative growth</strong>.
+    </p>
+    <div class="dot-animation"></div>
+  </div>
+</section>
+
+
+
+<style>
+
+    .real-talks-section {
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at center, #fffaf1, #ffe9cc);
+  text-align: center;
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+.real-talks-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #e75480;
+  position: relative;
+}
+
+.line-accent {
+  display: inline-block;
+  background-image: linear-gradient(to right, #ffb347, #ffcc70);
+  background-size: 100% 0.25em;
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+  padding-bottom: 0.1em;
+}
+
+.animated-highlight {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.9;
+  background: #fff4e6;
+  padding: 1.5rem 2rem;
+  border-left: 6px solid #ff9900;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  animation: popHighlight 1.3s ease-out both;
+}
+
+.tagged {
+  color: #d35400;
+  font-weight: 600;
+  position: relative;
+}
+
+.glow {
+  color: #e75480;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(231, 84, 128, 0.4);
+}
+
+@keyframes popHighlight {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .real-talks-section h2 {
+    font-size: 2rem;
+  }
+
+  .animated-highlight {
+    font-size: 1.1rem;
+    padding: 1.2rem 1rem;
+  }
+}
+
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #f2f2f2;
+}
+
+#services-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-block {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid #444;
+  background: #1a1a1a;
+}
+
+.service-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffcc70;
+}
+
+.service-block p.intro-desc {
+  font-size: 1.25rem;
+  max-width: 700px;
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+.service-block ul {
+  padding-left: 1rem;
+  list-style: square;
+  max-width: 700px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.service-block li {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.gradient {
+  background: linear-gradient(to right, #191919, #2b2b2b);
+}
+
+/* This is the spacer that ensures the next section is visible */
+.services-spacer {
+  height: 100vh;
+  background: #1a1a1a;
+}
+
+/* Real Talks Section */
+.real-talks-section {
+  padding: 5rem 2rem;
+  background: #fff8f2;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  color: #111;
+}
+
+.real-talks-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e75480;
+  margin-bottom: 1.2rem;
+}
+
+.animated-highlight {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.8;
+  background: linear-gradient(120deg, #ffddaa 0%, #ffd28c 100%);
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #ff9900;
+  border-radius: 8px;
+  animation: popHighlight 1.2s ease-out;
+}
+
+@keyframes popHighlight {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .real-talks-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .animated-highlight {
+    font-size: 1.05rem;
+    padding: 1rem;
+  }
+}
+
+    
+    .real-talks-section {
+  padding: 5rem 2rem;
+  background: #fff8f2;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.real-talks-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e75480;
+  margin-bottom: 1.2rem;
+}
+
+.animated-highlight {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.8;
+  background: linear-gradient(120deg, #ffddaa 0%, #ffd28c 100%);
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #ff9900;
+  border-radius: 8px;
+  animation: popHighlight 1.2s ease-out;
+}
+
+@keyframes popHighlight {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .real-talks-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .animated-highlight {
+    font-size: 1.05rem;
+    padding: 1rem;
+  }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const blocks = gsap.utils.toArray('.service-block');
+
+  blocks.forEach((block) => {
+    ScrollTrigger.create({
+      trigger: block,
+      start: 'top top',
+      end: 'bottom top',
+      pin: true,
+      pinSpacing: false, // ✅ Keeps stacked scroll feel
+      scrub: true
+    });
+  });
+</script>
+
+
+
+
+
+<section class="stacked-scroll-section">
+  <div class="stacked-scroll-outer" id="scrollOuter">
+    <div class="stacked-scroll-inner" id="scrollInner">
+      <h2 class="stacked-heading">Where These <span class="highlighted">Talks Belong</span></h2>
+
+      <div class="stacked-card">🎓 <strong>Educational Hubs</strong><br>Universities, colleges, ed-tech cohorts, student clubs, startup incubators</div>
+      <div class="stacked-card">🌱 <strong>Creative & Growth Communities</strong><br>Youth forums, Gen Z networks, solopreneur groups, personal growth summits</div>
+      <div class="stacked-card">💼 <strong>Industry & Professional Circles</strong><br>Marketing agencies, creative communities, content & creator collectives, corporate panels</div>
+      <div class="stacked-card scroll-cards__item--last">🚀 <strong>Founder-Driven Spaces</strong><br>Founder events, emerging orgs, early-stage teams</div>
+
+      <div id="finalCTA" class="final-cta">
+        <button onclick="document.querySelector('.cta-book-talk').scrollIntoView({ behavior: 'smooth' })">Let’s Talk</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stacked-heading {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: linear-gradient(to right, #fffaf4, #ffe5d0);
+    padding: 1rem 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid #ff9900;
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.1);
+  }
+  .stacked-heading .highlighted {
+    background: linear-gradient(120deg, #ff9900, #e75480);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stacked-scroll-section {
+    background: linear-gradient(to top left, #fffaf4, #ffe5d0);
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .stacked-scroll-outer {
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+  }
+  .stacked-scroll-outer::-webkit-scrollbar {
+    display: none;
+  }
+  .stacked-scroll-inner {
+    position: relative;
+    padding: 8rem 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .stacked-card {
+    background: #ffffff;
+    border-left: 6px solid #ff9900;
+    border-radius: 16px;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 120px;
+    margin-bottom: 3rem;
+    z-index: 1;
+  }
+  .stacked-card strong {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .final-cta {
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+  }
+  .final-cta.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .final-cta button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .stacked-heading {
+      font-size: 2rem;
+    }
+    .stacked-card {
+      font-size: 1rem;
+      padding: 1.5rem;
+    }
+    .final-cta button {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const scrollWrapper = document.getElementById('scrollInner');
+  const outerWrapper = document.getElementById('scrollOuter');
+  const lastCard = document.querySelector('.scroll-cards__item--last');
+  const finalCTA = document.getElementById('finalCTA');
+
+  outerWrapper.addEventListener('scroll', () => {
+    const lastCardRect = lastCard.getBoundingClientRect();
+    const wrapperRect = outerWrapper.getBoundingClientRect();
+
+    if (lastCardRect.top <= wrapperRect.top + 20) {
+      finalCTA.classList.add('show');
+    }
+  });
+</script>
+
+<section class="cta-book-talk">
+  <h2 class="cta-heading">Book a Talk That <span>Resonates</span></h2>
+  <p class="cta-subtext">Real stories. Relatable energy. Honest conversations that leave an impact.</p>
+  <a href="getintouch.html" class="cta-button">Book Now</a>
+</section>
+
+<style>
+.cta-book-talk {
+  background: linear-gradient(to right, #fff1e0, #fffaf4);
+  text-align: center;
+  padding: 6rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+.cta-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+.cta-heading span {
+  background: linear-gradient(120deg, #ff9900, #e75480);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cta-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-button {
+  display: inline-block;
+  background: #ff9900;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.2);
+}
+.cta-button:hover {
+  background: #e67e22;
+  box-shadow: 0 12px 30px rgba(255, 153, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .cta-heading {
+    font-size: 2rem;
+  }
+  .cta-subtext {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+</style>
+
+
+
+
+<!-- Font and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .connection-section {
+   background: #f9a007;
+;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-title {
+    font-size: 2.8em;
+    color: #f0f2f4;
+    margin-bottom: 40px;
+  }
+
+  .connect-title span {
+    color: #f4efef;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    background: #fff;
+    padding: 30px 25px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat .icon {
+    font-size: 2.5em;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+
+  .stat-label {
+    font-size: 1em;
+    color: #444;
+    margin-top: 5px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons li a {
+    font-size: 1.8em;
+    color: #007BFF;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons .tooltip {
+    visibility: hidden;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .social-icons li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .connect-title {
+      font-size: 2em;
+    }
+
+    .stat {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+</style>
+
+<!-- Scroll-Triggered Count Animation Script -->
+<script>
+  const statElements = document.querySelectorAll('.stat');
+
+  const animateCounters = (entry) => {
+    const statNumber = entry.querySelector('.stat-number');
+    const target = +entry.getAttribute('data-target');
+    let count = 0;
+    const duration = 2000;
+    const stepTime = Math.max(10, duration / target);
+
+    const formatNumber = (num) => {
+      if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K+';
+      return num;
+    };
+
+    const update = () => {
+      count += Math.ceil(target / (duration / stepTime));
+      if (count >= target) {
+        statNumber.innerText = formatNumber(target);
+      } else {
+        statNumber.innerText = formatNumber(count);
+        setTimeout(update, stepTime);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters(entry.target);
+        obs.unobserve(entry.target); // only run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statElements.forEach(stat => observer.observe(stat));
+</script>
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <span>© <strong>Shreya</strong> — All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <a href="https://www.instagram.com/authoreyaa/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shreyagunda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:shreyagunda76@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-right">
+<span>
+  Designed with ❤️ by 
+  <strong>
+    <a href="https://www.linkedin.com/in/nitish-kumar-516aba28b/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+      Nitish Kumar
+    </a>
+  </strong>
+</span>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+  .site-footer {
+    background: linear-gradient(135deg, #ffe5b4, #ffcc99);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-left strong,
+  .footer-right strong {
+    color: #ff9900;
+  }
+
+  .footer-left:hover,
+  .footer-right:hover {
+    transform: translateY(-2px);
+    color: #111;
+  }
+
+  .footer-center a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-center a:hover {
+    color: #ff9900;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-center {
+      order: 1;
+    }
+    .footer-left,
+    .footer-right {
+      order: 2;
+    }
+  }
+</style>
+<!-- Page Transition: Vertical Sliding Tiles -->
+<div class="loader loader--active" id="page-transition">
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0s 2.5s ease;
+    background: transparent;
+  }
+
+  .loader__tile {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 20%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: height 2.2s ease;
+  }
+
+  .loader__tile:nth-child(1) { left: 0%; transition-delay: 0s; }
+  .loader__tile:nth-child(2) { left: 20%; transition-delay: 0.4s; }
+  .loader__tile:nth-child(3) { left: 40%; transition-delay: 0.8s; }
+  .loader__tile:nth-child(4) { left: 60%; transition-delay: 1.2s; }
+  .loader__tile:nth-child(5) { left: 80%; transition-delay: 1.6s; }
+
+  .loader--active {
+    height: 100vh;
+    transition-delay: 0s;
+  }
+
+  .loader--active .loader__tile {
+    height: 100vh;
+  }
+</style>
+
+<script>
+  const loader = document.getElementById('page-transition');
+
+  // On page load
+  window.addEventListener('load', () => {
+    loader.classList.remove('loader--active');
+  });
+
+  // On link click
+  document.querySelectorAll("a[href]").forEach(link => {
+    const isInternal = link.hostname === window.location.hostname;
+
+    link.addEventListener("click", e => {
+      if (!isInternal || link.target === "_blank" || link.href.includes("#") || link.hasAttribute("data-no-transition")) return;
+      e.preventDefault();
+
+      loader.classList.add("loader--active");
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 3000); // Wait for animation to complete
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreya Gunda</title>
+    <!-- Favicon -->
+    <link href="img/IMG_4208.jpeg" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #ffe5b4;
+      --peach-dark: #ffcc99;
+      --accent: #ff9900;
+      --accent-dark: #e88000;
+      --text: #2d2d2d;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--peach);
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--peach-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .get-in-touch {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-in-touch:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: 1rem;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--peach-dark);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+  <div class="brand">Shreya</div>
+  <div class="nav-right">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+ <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Power section.html">1:1 Section</a>
+      <a href="Services.html">Services</a>
+      <a href="BookaTalk.html">Book a Talk</a>
+      <a href="Author.html">The Author</a>
+        <a href="Gallery.html">Gallery</a>
+      <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script>
+  
+<section class="consulting-section">
+  <div class="consulting-grid">
+    <!-- Left: Image with animation -->
+    <div class="consulting-image-wrapper">
+      <div class="decorated-image">
+        <img src="img/IMG_4205.jpg" alt="Consulting Visual" class="consulting-image" />
+        <div class="animated-circle circle1"></div>
+        <div class="animated-circle circle2"></div>
+      </div>
+    </div>
+
+    <!-- Right: Text content -->
+    <div class="consulting-content">
+      <h2 class="headline-1">High-Context Consulting for High-Growth Moves</h2>
+      <h3 class="headline-2">Messaging. Marketing. Momentum. In One Session.</h3>
+
+      <p class="consulting-paragraph">
+        Not every move needs a retainer. Or a roadmap.<br />
+        Sometimes, you just need clarity — the kind that gets to the root fast and moves you forward faster.
+      </p>
+
+      <p class="consulting-paragraph">
+        That’s where these sessions come in. Just sharp thinking, brand-first strategy, and high-context direction — distilled into one focused conversation.
+      </p>
+
+      <div class="consulting-highlight">
+        Built for those who move fast and think long.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+
+    .consulting-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.consulting-image-wrapper {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.decorated-image {
+  position: relative;
+  display: inline-block;
+  animation: floatImg 5s ease-in-out infinite;
+}
+
+.consulting-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+}
+
+/* Animated Decor Circles */
+.animated-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.12;
+  animation: spin 20s linear infinite;
+}
+
+.circle1 {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(#ff9900 10%, transparent 60%);
+  top: -30px;
+  left: -30px;
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#ffcc99 10%, transparent 70%);
+  bottom: -20px;
+  right: -20px;
+}
+
+@keyframes floatImg {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consulting-grid {
+    flex-direction: column;
+  }
+
+  .consulting-image {
+    max-width: 90%;
+  }
+}
+
+    .consulting-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.consulting-image-wrapper {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.decorated-image {
+  position: relative;
+  display: inline-block;
+  animation: floatImg 5s ease-in-out infinite;
+}
+
+.consulting-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+}
+
+/* Animated Decor Circles */
+
+    
+    
+.consulting-section {
+  background-color: #fff8ee;
+  padding: 5rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeInSection 1s ease-in;
+}
+
+.consulting-content {
+  max-width: 800px;
+}
+
+.headline-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  animation: slideUp 1s ease-in-out;
+}
+
+.headline-2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ff9900;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.consulting-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.consulting-highlight {
+  background-color: #ffe5b4;
+  border-left: 5px solid #ff9900;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  border-radius: 10px;
+  animation: popIn 1.5s ease-out;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .headline-1 {
+    font-size: 1.5rem;
+  }
+
+  .headline-2 {
+    font-size: 1.2rem;
+  }
+
+  .consulting-paragraph {
+    font-size: 1rem;
+  }
+
+  .consulting-highlight {
+    font-size: 0.95rem;
+  }
+}
+</style>
+
+<!-- Font and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .connection-section {
+   background: #f9a007;
+;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .connect-title {
+    font-size: 2.8em;
+    color: #f0f2f4;
+    margin-bottom: 40px;
+  }
+
+  .connect-title span {
+    color: #f4efef;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    background: #fff;
+    padding: 30px 25px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat .icon {
+    font-size: 2.5em;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+
+  .stat-label {
+    font-size: 1em;
+    color: #444;
+    margin-top: 5px;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons li a {
+    font-size: 1.8em;
+    color: #007BFF;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons .tooltip {
+    visibility: hidden;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .social-icons li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .connect-title {
+      font-size: 2em;
+    }
+
+    .stat {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+</style>
+
+<!-- Scroll-Triggered Count Animation Script -->
+<script>
+  const statElements = document.querySelectorAll('.stat');
+
+  const animateCounters = (entry) => {
+    const statNumber = entry.querySelector('.stat-number');
+    const target = +entry.getAttribute('data-target');
+    let count = 0;
+    const duration = 2000;
+    const stepTime = Math.max(10, duration / target);
+
+    const formatNumber = (num) => {
+      if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K+';
+      return num;
+    };
+
+    const update = () => {
+      count += Math.ceil(target / (duration / stepTime));
+      if (count >= target) {
+        statNumber.innerText = formatNumber(target);
+      } else {
+        statNumber.innerText = formatNumber(count);
+        setTimeout(update, stepTime);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters(entry.target);
+        obs.unobserve(entry.target); // only run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statElements.forEach(stat => observer.observe(stat));
+</script>
+
+
+<section class="who-for-section">
+  <h2 class="section-title fancy-heading"><span>Who It’s For</span></h2>
+
+  <div class="who-grid">
+    <div class="who-card">
+      <h3>Early-Stage Founders</h3>
+      <p>Figuring out brand, voice, growth — all at once.</p>
+    </div>
+
+    <div class="who-card">
+      <h3>Freelance Creatives</h3>
+      <p>Refine your niche and offer so clients start chasing you.</p>
+    </div>
+
+    <div class="who-card">
+      <h3>Solopreneurs</h3>
+      <p>You wear 10 hats. Let’s get one area dialed in today.</p>
+    </div>
+
+   
+  </div>
+</section>
+<style>
+.who-for-section {
+  background-color: #ffe5b4; /* Previously the card color */
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title.fancy-heading span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 3px solid #ff9900;
+  padding-bottom: 0.3rem;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+}
+
+.who-card {
+  background-color: #ffffff; /* Changed to white */
+  border: 2px dashed #ff9900;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.who-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.who-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.who-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #fff2d4, #fffaf0);
+  border: 3px solid #ff9900;
+  font-style: italic;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .who-card {
+    text-align: center;
+  }
+}
+</style>
+<section class="strategic-section">
+  <div class="strategic-intro">
+    <p class="highlight-text">Live Zoom session + Strategic roadmap + Interactive Q&A</p>
+    <h2 class="strategic-headline">Expert Eyes on Your Exact Blockers</h2>
+  </div>
+
+  <!-- Slider Container -->
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <!-- Repeat cards to loop seamlessly -->
+      <div class="strategy-card"> <h3>Content Strategy Clarity</h3> <p>Pin down what to say, where to say it, and how to say it: for real traction.</p> </div>
+      <div class="strategy-card"> <h3>LinkedIn Ghostwriting Blueprint</h3> <p>A plug-and-play system to turn your insights into scroll-stopping content and build inbound demand.</p> </div>
+      <div class="strategy-card"> <h3>Freelancing & Creative Consulting Guidance</h3> <p>From pricing and positioning to pitching and process. Get strategic direction to grow sustainably.</p> </div>
+      <div class="strategy-card"> <h3>Offer & Messaging Audit</h3> <p>Break down your current offer stack, messaging, hooks, and rebuild it with clarity and relevance.</p> </div>
+      <div class="strategy-card"> <h3>Growth Content Funnels (Organic)</h3> <p>Understand how to turn your organic content into inbound opportunities, without spending on ads.</p> </div>
+
+      <!-- Duplicate cards for seamless loop -->
+      <div class="strategy-card"> <h3>Content Strategy Clarity</h3> <p>Pin down what to say, where to say it, and how to say it: for real traction.</p> </div>
+      <div class="strategy-card"> <h3>LinkedIn Ghostwriting Blueprint</h3> <p>A plug-and-play system to turn your insights into scroll-stopping content and build inbound demand.</p> </div>
+      <div class="strategy-card"> <h3>Freelancing & Creative Consulting Guidance</h3> <p>From pricing and positioning to pitching and process. Get strategic direction to grow sustainably.</p> </div>
+      <div class="strategy-card"> <h3>Offer & Messaging Audit</h3> <p>Break down your current offer stack, messaging, hooks, and rebuild it with clarity and relevance.</p> </div>
+      <div class="strategy-card"> <h3>Growth Content Funnels (Organic)</h3> <p>Understand how to turn your organic content into inbound opportunities, without spending on ads.</p> </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+  .strategic-section {
+  padding: 4rem 2rem;
+  background-color: #fdf9f3;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.strategic-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.highlight-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff7a2f;
+}
+
+.strategic-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+
+/* Slider Container */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Track: slides move left continuously */
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollSlider 30s linear infinite;
+}
+
+/* Individual card styling */
+.strategy-card {
+  flex: 0 0 280px;
+  margin: 0 1rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  min-height: 280px;
+}
+
+.strategy-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ff6f61;
+}
+
+.strategy-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Scroll Animation */
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .strategy-card {
+    flex: 0 0 240px;
+    padding: 1.5rem;
+  }
+
+  .strategic-headline {
+    font-size: 1.5rem;
+  }
+}
+.strategy-card:nth-of-type(5n+1) { background: linear-gradient(135deg, #ffb47d, #ffcba4); }
+.strategy-card:nth-of-type(5n+2) { background: linear-gradient(135deg, #ff8a5c, #fbc687); }
+.strategy-card:nth-of-type(5n+3) { background: linear-gradient(135deg, #f98686, #ffd1a4); }
+.strategy-card:nth-of-type(5n+4) { background: linear-gradient(135deg, #faaa9e, #ffdbaa); }
+.strategy-card:nth-of-type(5n+5) { background: linear-gradient(135deg, #fbc687, #ffe7c7); }
+
+
+</style>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2 class="cta-heading">Ready to Book?</h2>
+    
+    <a href="getintouch.html" class="cta-btn primary">Lock in your 1:1 here!</a>
+
+    <p class="cta-subtext">Drop an enquiry if you're unsure which category fits you best.</p>
+
+    <a href="mailto:shreyagunda76@gmail.com" class="cta-btn secondary">Email Me Directly</a>
+  </div>
+</section>
+
+<style>.cta-section {
+  background: linear-gradient(135deg, #ffe5b4, #ffd1a4);
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-container {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.cta-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtext {
+  font-size: 1rem;
+  margin: 1.5rem 0 1rem;
+  color: #444;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.cta-btn.primary {
+  background-color: #ff9900;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.cta-btn.primary:hover {
+  background-color: #e67e00;
+}
+
+.cta-btn.secondary {
+  background-color: #fff;
+  color: #ff9900;
+  border: 2px solid #ff9900;
+}
+
+.cta-btn.secondary:hover {
+  background-color: #fff4e5;
+  color: #e67e00;
+  border-color: #e67e00;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <span>© <strong>Shreya</strong> — All rights reserved</span>
+    </div>
+
+    <div class="footer-center">
+      <a href="https://github.com/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:contact@shreya.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-right">
+      <span>Designed with ❤️ by <strong>Nitish</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<style>
+  .site-footer {
+    background: linear-gradient(135deg, #ffe5b4, #ffcc99);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-left strong,
+  .footer-right strong {
+    color: #ff9900;
+  }
+
+  .footer-left:hover,
+  .footer-right:hover {
+    transform: translateY(-2px);
+    color: #111;
+  }
+
+  .footer-center a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-center a:hover {
+    color: #ff9900;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-center {
+      order: 1;
+    }
+    .footer-left,
+    .footer-right {
+      order: 2;
+    }
+  }
+</style>
+<!-- Page Transition: Vertical Sliding Tiles -->
+<div class="loader loader--active" id="page-transition">
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+  <div class="loader__tile"></div>
+</div>
+
+<style>
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0s 2.5s ease;
+    background: transparent;
+  }
+
+  .loader__tile {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 20%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: height 2.2s ease;
+  }
+
+  .loader__tile:nth-child(1) { left: 0%; transition-delay: 0s; }
+  .loader__tile:nth-child(2) { left: 20%; transition-delay: 0.4s; }
+  .loader__tile:nth-child(3) { left: 40%; transition-delay: 0.8s; }
+  .loader__tile:nth-child(4) { left: 60%; transition-delay: 1.2s; }
+  .loader__tile:nth-child(5) { left: 80%; transition-delay: 1.6s; }
+
+  .loader--active {
+    height: 100vh;
+    transition-delay: 0s;
+  }
+
+  .loader--active .loader__tile {
+    height: 100vh;
+  }
+</style>
+
+<script>
+  const loader = document.getElementById('page-transition');
+
+  // On page load
+  window.addEventListener('load', () => {
+    loader.classList.remove('loader--active');
+  });
+
+  // On link click
+  document.querySelectorAll("a[href]").forEach(link => {
+    const isInternal = link.hostname === window.location.hostname;
+
+    link.addEventListener("click", e => {
+      if (!isInternal || link.target === "_blank" || link.href.includes("#") || link.hasAttribute("data-no-transition")) return;
+      e.preventDefault();
+
+      loader.classList.add("loader--active");
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 3000); // Wait for animation to complete
+    });
+  });
+</script>
+
+</body>
+</html>
