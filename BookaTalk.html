@@ -184,7 +184,7 @@
 
 <section class="hero real-convo">
 <div class="framed-image enhanced-frame">
-  <img src="img/20+ Strategy Hours.png" alt="Shreya Profile" class="center-image" />
+  <img src="img/20+ Strategy Hours (2).png" alt="Shreya Profile" class="center-image" />
 </div>
 
 
@@ -1188,6 +1188,235 @@
 </script>
 
 
+<section class="contact-section" id="contact" style="padding: 5rem 1rem; background: linear-gradient(to right, #fff4e6, #ffe5b4); font-family: 'Poppins', sans-serif;">
+  <style>
+    .form-wrapper {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .form-wrapper h2 {
+      font-size: 2rem;
+      color: #dc1c7c;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #dc1c7c;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .form-row .form-group {
+      flex: 1 1 300px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .checkbox input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background-color: #dc1c7c;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #c5186f;
+    }
+
+    #formMessage {
+      margin-top: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .form-wrapper {
+        padding: 2rem;
+      }
+    }
+  </style>
+<form id="contactForm" class="form-wrapper" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+  <h2>Form Questionnaire</h2>
+  <input type="hidden" name="access_key" value="dabae661-836d-4d9e-960b-ce9d67b90df2">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">1. Name & Role</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="organization">2. Organization / Community Name</label>
+      <input type="text" id="organization" name="organization">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">3. Email Address</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="eventType">4. What type of event is this?</label>
+    <select id="eventType" name="eventType" required>
+      <option value="">-- Select an option --</option>
+      <option value="College Talk">College Talk</option>
+      <option value="Corporate Session">Corporate Session</option>
+      <option value="Community Event">Community Event</option>
+      <option value="Panel">Panel</option>
+      <option value="Workshop">Workshop</option>
+      <option value="Online Summit">Online Summit</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="audience">5. Who’s your audience?</label>
+    <select id="audience" name="audience" required>
+      <option value="">-- Select an option --</option>
+      <option value="Students">Students</option>
+      <option value="Founders">Founders</option>
+      <option value="Creatives">Creatives</option>
+      <option value="Marketers">Marketers</option>
+      <option value="Teams">Teams</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="topics">6. What topics are you interested in?</label>
+    <textarea id="topics" name="topics" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="outcome">7. What outcome do you want your audience to walk away with?</label>
+    <textarea id="outcome" name="outcome" placeholder="Clarity, inspiration, tactical insights, emotional connection, etc." required></textarea>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="dateTime">8. Preferred Date & Time (if any)</label>
+      <input type="text" id="dateTime" name="dateTime">
+    </div>
+    <div class="form-group">
+      <label for="format">9. Format</label>
+      <select id="format" name="format" required>
+        <option value="">-- Select an option --</option>
+        <option value="In-person">In-person</option>
+        <option value="Online">Online</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="extra">10. Anything else I should know before we connect?</label>
+    <textarea id="extra" name="extra"></textarea>
+  </div>
+
+  <button class="submit-btn" type="submit">Submit</button>
+
+  <div id="formMessage"></div>
+
+  <div class="form-footer">
+    I’ll get back to you within 48 hours. Your details are safe here.
+  </div>
+</form>
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const message = document.getElementById('formMessage');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        message.innerText = "🎉 Thanks! Your message was sent successfully.";
+        message.style.color = "green";
+        form.reset();
+      } else {
+        message.innerText = "❌ Access Denied or invalid form.";
+        message.style.color = "red";
+      }
+    })
+    .catch(error => {
+      message.innerText = "❌ Submission failed: " + error.message;
+      message.style.color = "red";
+    });
+  });
+</script>
 
 
 
@@ -1229,6 +1458,11 @@
 <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
 <style>
+
+  footer {
+  margin-top: 3rem;
+}
+
   .site-footer {
     background: linear-gradient(135deg, #ffe5b4, #ffcc99);
     color: #333;
@@ -1341,6 +1575,11 @@
     height: 100vh;
   }
 </style>
+
+
+
+
+
 
 <script>
   const loader = document.getElementById('page-transition');
