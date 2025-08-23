@@ -163,11 +163,11 @@
     </div>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="Power section.html">1:1 Sessions</a>
+      <a href="Power section.html">1:1 Section</a>
       <a href="Services.html">Services</a>
       <a href="BookaTalk.html">Book a Talk</a>
       <a href="Author.html">The Author</a>
-        
+ 
       <a href="getintouch.html"><button class="get-in-touch">Get in Touch</button></a>
     </div>
   </div>
@@ -304,92 +304,90 @@
       }
     }
   </style>
-<form id="contactForm" class="form-wrapper" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-  <h2>Form Questionnaire</h2>
-  <input type="hidden" name="access_key" value="dabae661-836d-4d9e-960b-ce9d67b90df2">
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="name">1. Name & Role</label>
-      <input type="text" id="name" name="name" required>
+  <form id="contactForm" class="form-wrapper" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+    <h2>Start the Conversation</h2>
+    <input type="hidden" name="access_key" value="dabae661-836d-4d9e-960b-ce9d67b90df2">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">1. What’s Your Name?</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">2. Best Email to Reach You</label>
+        <input type="email" id="email" name="email" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="organization">2. Organization / Community Name</label>
-      <input type="text" id="organization" name="organization">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">3. A Quick Contact Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="brand">4. Who Are You / Your Brand?</label>
+        <input type="text" id="brand" name="brand" required>
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="email">3. Email Address</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-
-  <div class="form-group">
-    <label for="eventType">4. What type of event is this?</label>
-    <select id="eventType" name="eventType" required>
-      <option value="">-- Select an option --</option>
-      <option value="College Talk">College Talk</option>
-      <option value="Corporate Session">Corporate Session</option>
-      <option value="Community Event">Community Event</option>
-      <option value="Panel">Panel</option>
-      <option value="Workshop">Workshop</option>
-      <option value="Online Summit">Online Summit</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="audience">5. Who’s your audience?</label>
-    <select id="audience" name="audience" required>
-      <option value="">-- Select an option --</option>
-      <option value="Students">Students</option>
-      <option value="Founders">Founders</option>
-      <option value="Creatives">Creatives</option>
-      <option value="Marketers">Marketers</option>
-      <option value="Teams">Teams</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="topics">6. What topics are you interested in?</label>
-    <textarea id="topics" name="topics" required></textarea>
-  </div>
-
-  <div class="form-group">
-    <label for="outcome">7. What outcome do you want your audience to walk away with?</label>
-    <textarea id="outcome" name="outcome" placeholder="Clarity, inspiration, tactical insights, emotional connection, etc." required></textarea>
-  </div>
-
-  <div class="form-row">
     <div class="form-group">
-      <label for="dateTime">8. Preferred Date & Time (if any)</label>
-      <input type="text" id="dateTime" name="dateTime">
+      <label for="link">5. Link Me In</label>
+      <input type="url" id="link" name="link">
     </div>
+
     <div class="form-group">
-      <label for="format">9. Format</label>
-      <select id="format" name="format" required>
+      <label for="vibe">6. What Brings You Here?</label>
+      <select id="vibe" name="vibe" required>
         <option value="">-- Select an option --</option>
-        <option value="In-person">In-person</option>
-        <option value="Online">Online</option>
+        <option value="Collaborate">Let's Collaborate!</option>
+        <option value="Strategy Session">Book a Strategy Session</option>
+        <option value="Media Inquiry">Media/Press Inquiry</option>
+        <option value="Custom Project">Custom Project Brief</option>
+        <option value="Other">Something Else Entirely</option>
       </select>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="extra">10. Anything else I should know before we connect?</label>
-    <textarea id="extra" name="extra"></textarea>
-  </div>
+    <div class="form-group">
+      <label for="message">7. Paint Me the Picture</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
 
-  <button class="submit-btn" type="submit">Submit</button>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="budget">8. Ballpark Budget</label>
+        <input type="text" id="budget" name="budget">
+      </div>
+      <div class="form-group">
+        <label for="timeline">9. When Do You Want This Magic to Happen?</label>
+        <input type="text" id="timeline" name="timeline" required>
+      </div>
+    </div>
 
-  <div id="formMessage"></div>
+    <div class="form-group">
+      <label for="discovery">10. How Did You Stumble Upon My Work?</label>
+      <input type="text" id="discovery" name="discovery">
+    </div>
 
-  <div class="form-footer">
-    I’ll get back to you within 48 hours. Your details are safe here.
-  </div>
-</form>
+    <div class="form-group">
+      <label for="extra">11. Want to Share Anything Else?</label>
+      <textarea id="extra" name="extra"></textarea>
+    </div>
 
+    <div class="form-group checkbox">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">12. I’m cool with you using my info to respond to this inquiry.</label>
+    </div>
+
+    <button class="submit-btn" type="submit">Start the Conversation</button>
+
+    <div id="formMessage"></div>
+
+    <div class="form-footer">
+      I’ll get back to you within 48 hours. Your details are safe here.
+    </div>
+  </form>
+</section>
 
 <script>
   const form = document.getElementById('contactForm');
