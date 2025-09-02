@@ -27,6 +27,8 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--peach);
       color: var(--text);
+      margin: 0;
+  padding: 0;
     }
 
     nav {
@@ -39,6 +41,7 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+     
     }
 
     .brand {
@@ -180,15 +183,20 @@
 <style>
 
     /* ========== HERO SECTION ========== */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
-      min-height: 100vh;
-      animation: fadeIn 1.2s ease-in-out;
-    }
+  .hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding:  2rem 2rem ;   /* reduced from 4rem */
+  min-height: auto;     /* changed from 100vh */
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero {
+  margin-top: 0;
+    padding-top: 0;   /* ensures no extra gap from outside */
+}
 
     .hero-content {
       max-width: 600px;
@@ -200,6 +208,7 @@
       font-weight: 600;
       margin-bottom: 1rem;
       line-height: 1.4;
+        margin-top: 0; 
     }
 
     .hero p {
