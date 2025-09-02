@@ -305,24 +305,26 @@
     }
   </style>
 <form id="contactForm" class="form-wrapper" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-  <h2>Quick Form – Take 2 Minutes!
-</h2>
+  <h2>Quick Form – Take 2 Minutes!</h2>
   <input type="hidden" name="access_key" value="dabae661-836d-4d9e-960b-ce9d67b90df2">
 
   <div class="form-row">
     <div class="form-group">
       <label for="name">1. Name & Role</label>
       <input type="text" id="name" name="name" required>
+      <small class="helper-text"><em>E.g., Soumya Pandey – Content Strategist</em></small>
     </div>
     <div class="form-group">
       <label for="organization">2. Organization / Community Name</label>
       <input type="text" id="organization" name="organization">
+      <small class="helper-text"><em>Your company, college, or community group.</em></small>
     </div>
   </div>
 
   <div class="form-group">
     <label for="email">3. Email Address</label>
     <input type="email" id="email" name="email" required>
+    <small class="helper-text"><em>I’ll send my response here first.</em></small>
   </div>
 
   <div class="form-group">
@@ -337,6 +339,7 @@
       <option value="Online Summit">Online Summit</option>
       <option value="Other">Other</option>
     </select>
+    <small class="helper-text"><em>Helps me tailor my talk to your setting.</em></small>
   </div>
 
   <div class="form-group">
@@ -350,22 +353,26 @@
       <option value="Teams">Teams</option>
       <option value="Other">Other</option>
     </select>
+    <small class="helper-text"><em>Who I’ll be speaking to (so I can keep it relevant).</em></small>
   </div>
 
   <div class="form-group">
     <label for="topics">6. What topics are you interested in?</label>
     <textarea id="topics" name="topics" required></textarea>
+    <small class="helper-text"><em>List the subjects/themes that excite your audience.</em></small>
   </div>
 
   <div class="form-group">
     <label for="outcome">7. What outcome do you want your audience to walk away with?</label>
     <textarea id="outcome" name="outcome" placeholder="Clarity, inspiration, tactical insights, emotional connection, etc." required></textarea>
+    <small class="helper-text"><em>What’s the big win for your audience?</em></small>
   </div>
 
   <div class="form-row">
     <div class="form-group">
       <label for="dateTime">8. Preferred Date & Time (if any)</label>
       <input type="text" id="dateTime" name="dateTime">
+      <small class="helper-text"><em>Exact or approximate timeline works.</em></small>
     </div>
     <div class="form-group">
       <label for="format">9. Format</label>
@@ -374,12 +381,14 @@
         <option value="In-person">In-person</option>
         <option value="Online">Online</option>
       </select>
+      <small class="helper-text"><em>So I know whether to travel or log in 🙂</em></small>
     </div>
   </div>
 
   <div class="form-group">
     <label for="extra">10. Anything else I should know before we connect?</label>
     <textarea id="extra" name="extra"></textarea>
+    <small class="helper-text"><em>Wildcard space – tell me what matters to you.</em></small>
   </div>
 
   <button class="submit-btn" type="submit">Submit</button>
@@ -390,8 +399,6 @@
     I’ll get back to you within 48 hours. Your details are safe here.
   </div>
 </form>
-
-
 <script>
   const form = document.getElementById('contactForm');
   const message = document.getElementById('formMessage');
@@ -905,11 +912,10 @@
       loader.classList.add("loader--active");
       setTimeout(() => {
         window.location.href = link.href;
-      }, 40); // Wait for animation to complete
+      }, 700); // Wait for animation to complete
     });
   });
 </script>
 
 </body>
-
 </html>
